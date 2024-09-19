@@ -6,8 +6,7 @@ import Loginwithapple from "./components/loginwithapple";
 const Signup = () => {
  
   return (
-    <div className="flex flex-row h-full w-auto">
-      {/* Sidebar with fixed width */}
+    <div className="flex flex-row h-[100vh] w-auto">
       <div className="w-[45%] hidden sm:flex">
          <Leftsidebar />
        </div>

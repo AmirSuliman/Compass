@@ -7,20 +7,17 @@ const DescribeQuestion = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const navigate = useNavigate();
 
-  // Handler for radio button change
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
-  // Handler for form submission
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    navigate("/Busniess"); // Navigate to the desired route
+    event.preventDefault(); 
+    navigate("/Busniess"); 
   };
 
   return (
     <div className="flex flex-row h-[100vh]">
-      {/* Sidebar with fixed width */}
       <div className="w-[45%] hidden sm:flex">
         <Leftsidebar />
       </div>

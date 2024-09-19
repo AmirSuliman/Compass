@@ -7,35 +7,29 @@ const NoofpeopleQuestion = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const navigate = useNavigate();
 
-  // Handler for radio button change
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
-  // Handler for form submission (Next button)
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    navigate("/role"); // Navigate to the desired route
+    event.preventDefault(); 
+    navigate("/role"); 
   };
 
-  // Handler for Back button
   const handleBack = () => {
-    navigate(-1); // Navigate to the previous page in history
+    navigate(-1); 
   };
 
   return (
     <div className="flex flex-row h-[100vh]">
-      {/* Sidebar with fixed width */}
       <div className="w-[45%] hidden sm:flex">
         <Leftsidebar />
       </div>
 
-      {/* Main Content Area */}
       <div className="sm:w-[130vh] bg-[#f8f8f8] flex flex-col items-center justify-center">
         <div className="p-4 max-w-md w-full text-start mt-4">
           <h1 className="text-[25px] font-bold text-gray-800">How many people are going to use this plathform</h1>
           
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6 mt-12">
             {/* Radio Button 1 */}
             <div 
