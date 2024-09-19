@@ -6,7 +6,7 @@ import Loginwithapple from "./components/loginwithapple";
 const Signup = () => {
  
   return (
-    <div className="flex flex-row h-[100vh] w-auto">
+    <div className="flex flex-row h-auto w-auto">
       <div className="w-[45%] hidden sm:flex">
          <Leftsidebar />
        </div>
@@ -62,14 +62,16 @@ const Signup = () => {
                 required
               />
             </div>
-               <div className="flex flex-row gap-2">
-               <input
-                  type="checkbox"
-                />
-                <label htmlFor="rememberMe" className="relative cursor-pointer text-[13px]">
-                  By proceeding, you agree to the Terms of Service and Privacy Policy 
-                </label>
-               </div>
+            <div className="flex flex-row gap-2">
+             <input
+               type="checkbox"
+               className="bg-white"
+             />
+             <label htmlFor="rememberMe" className="relative cursor-pointer text-[13px]">
+               By proceeding, you agree to the Terms of Service and Privacy Policy
+             </label>
+           </div>
+           
             <button
               type="submit"
               className="mt-8 w-full py-3 px-4 bg-blue-500 text-white rounded-full hover:bg-blue-600"

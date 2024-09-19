@@ -1,5 +1,5 @@
 import Leftsidebar from "../components/leftsidebarauth";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -21,12 +21,12 @@ const RoleQuestion = () => {
   };
 
   return (
-    <div className="flex flex-row h-[100vh]">
+    <div className="flex flex-row h-[100vh] w-full">
       <div className="w-[45%] hidden sm:flex">
         <Leftsidebar />
       </div>
 
-      <div className="sm:w-[130vh] bg-[#f8f8f8] flex flex-col items-center justify-center">
+      <div className="w-[59vh] sm:w-[130vh] bg-[#f8f8f8] flex flex-col items-center justify-center">
         <div className="p-4 max-w-md w-full text-start mt-4">
           <h1 className="text-[25px] font-bold text-gray-800">What role do you have?</h1>
           
@@ -102,9 +102,10 @@ const RoleQuestion = () => {
             </div>
 
             <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option6' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+              className={`flex flex-row items-center justify-between space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option6' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
-              <input
+                <div className="flex flex-row gap-3">
+                <input
                 type="radio"
                 value="option6"
                 name="radio-group"
@@ -112,7 +113,11 @@ const RoleQuestion = () => {
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
               <label className={`text-gray-700 ${selectedOption === 'option6' ? 'text-[#D6A73B]' : ''}`}>Other</label>
+                </div>
+             
+              <ChevronDown/>
             </div>
+
 
             <div className="flex flex-row gap-3 mt-4">
               <button
