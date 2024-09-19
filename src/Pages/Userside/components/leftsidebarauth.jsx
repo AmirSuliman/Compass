@@ -1,9 +1,9 @@
 const Leftsidebar = () => {
   return (
-    <div className="bg-[#000F24] min-h-screen w-full  px-8">
+    <div className="bg-[#000F24] h-full w-full  px-8">
       {/* Background image applied here */}
-      <div className="bg-[url('/bg.png')] bg-no-repeat bg-cover ml-8 h-full w-full py-2 flex flex-col items-center justify-center">
-        <img src="/Macbook.png" alt="img" className="mr-8 mt-24" />
+      <div className="bg-[url('/bg.png')] bg-no-repeat bg-cover ml-8 h-full w-full py-2 flex flex-col items-center justify-start">
+        <img src="/Group 1597884986.png" alt="img" className="mr-8 mt-32 w-[500px]" />
 
         <h1 className="text-[24px] text-center mr-8 text-white">
           Lorem Ipsum ha sido el texto de <br /> Lorem Ipsum ha
