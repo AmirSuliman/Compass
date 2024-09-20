@@ -13,7 +13,7 @@ const Sizeofcompany = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    navigate("/"); 
+    navigate("/connect-tools"); 
   };
 
   const handleBack = () => {

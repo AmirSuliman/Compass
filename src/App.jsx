@@ -8,6 +8,7 @@ import BusinessQuestion from "./Pages/Userside/questions/business";
 import NoofpeopleQuestion from "./Pages/Userside/questions/noofpeople";
 import RoleQuestion from "./Pages/Userside/questions/role";
 import Sizeofcompany from "./Pages/Userside/questions/sizeofcompany";
+import Connecttools from "./Pages/Userside/connecttools";
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/people" element={<NoofpeopleQuestion/>}/>
         <Route path="/role" element={<RoleQuestion/>}/>
         <Route path="/companysize" element={<Sizeofcompany/>}/>
+        <Route path="/connect-tools" element={<Connecttools/>}/>
 
       </Routes>
     </Router>
