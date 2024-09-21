@@ -1,5 +1,6 @@
 import { lazy } from 'react';
-
+import DefaultLayout from '../Layout/defaultlayout';
+const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
 const Signup = lazy(() => import('../Pages/Userside/signup'));
 const Forgotpassword = lazy(() => import('../Pages/Userside/forgotpsaaword'));
@@ -69,6 +70,14 @@ const usersideRouter = [
   {
     path: '/saved-content',
     element: <Savedcontent />,
+  },
+  {
+    path: '/user/inbox',
+    element: (
+      <DefaultLayout>
+        <Inbox />
+      </DefaultLayout>
+    ),
   },
   {
     path: '/youtube-connection-details',
