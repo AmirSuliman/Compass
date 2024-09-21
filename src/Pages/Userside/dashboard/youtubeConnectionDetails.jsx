@@ -28,13 +28,17 @@ const YoutubeConnectionDetails = () => {
   ]
 
   const data = [
-    { name: "Dec 18", uv: 10000, pv: 24000 },
-    { name: "Dec 19", uv: 20000, pv: 32000 },
-    { name: "Dec 20", uv: 30000, pv: 37000 },
-    { name: "Dec 21", uv: 15000, pv: 42000 },
-    { name: "Dec 22", uv: 25000, pv: 48000 },
-    { name: "Dec 23", uv: 18000, pv: 39000 },
-    { name: "Dec 24", uv: 23000, pv: 45000 },
+    { name: "Dec 18", uv: 12000 },
+    { name: "Dec 19", uv: 28000 },
+    { name: "Dec 20", uv: 18000 },
+    { name: "Dec 21", uv: 3000 },
+    { name: "Dec 22", uv: 1500 },
+    { name: "Dec 23", uv: 18000 },
+    { name: "Dec 24", uv: 17000 },
+    { name: "Dec 24", uv: 17000 },
+    { name: "Dec 24", uv: 17000 },
+    { name: "Dec 24", uv: 17000 },
+    { name: "Dec 24", uv: 17000 },
   ]
 
   return (
@@ -129,15 +133,22 @@ const YoutubeConnectionDetails = () => {
 
         {/* Updated ResponsiveContainer with fixed height */}
         <div className='h-64 mt-4'>
-          <ResponsiveContainer width='100%' height='100%'>
+          <ResponsiveContainer width='100%' height={400}>
             <BarChart data={data}>
-              <CartesianGrid strokeDasharray='3 3' />
-              <XAxis dataKey='name' />
+              <CartesianGrid
+                vertical={true}
+                horizontal={true}
+                strokeDasharray='3 3'
+              />
+              <XAxis dataKey='name' interval={0} tick={{ fontSize: 12 }} />
               <YAxis ticks={[0, 1500, 3000, 15000, 25000, 50000]} />
               <Tooltip />
-              <Legend />
-              <Bar dataKey='pv' fill='#8884d8' />
-              <Bar dataKey='uv' fill='#82ca9d' />
+              <Bar
+                dataKey='uv'
+                fill='#4285F4'
+                radius={[100, 100, 0, 0]}
+                barSize={20}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
