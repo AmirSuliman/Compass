@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import DefaultLayout from '../Layout/defaultlayout';
-import YoutubeConnectionDetails from '../Pages/Userside/dashboard/youtubeconnectiondetails';
+import YoutubeConnectionDetails from '../Pages/Userside/dashboard/YoutubeConnectionDetails';
 
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
