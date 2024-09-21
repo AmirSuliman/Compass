@@ -11,6 +11,7 @@ import Sizeofcompany from "./Pages/Userside/questions/sizeofcompany";
 import Connecttools from "./Pages/Userside/connecttools";
 import Savedcontent from "./Pages/Userside/dashboard/savedcontent";
 import Connections from "./Pages/Userside/dashboard/connections";
+import Overview from "./Pages/Userside/dashboard/overview";
 const App = () => {
   return (
     <Router>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/connect-tools" element={<Connecttools/>}/>
         <Route path="/saved-content" element={<Savedcontent/>}/>
         <Route path="/connections" element={<Connections />}/>
+        <Route path="/overview" element={<Overview />}/>
 
       </Routes>
     </Router>
