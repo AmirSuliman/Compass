@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"], // Update with the correct file extensions and paths
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'], // Update with the correct file extensions and paths
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        Yellow: '#FDC546',
+      },
+    },
   },
   plugins: [],
-}
+};

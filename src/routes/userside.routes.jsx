@@ -1,18 +1,26 @@
 import { lazy } from 'react';
-import Sidebar from '../Layout/components/sidebar';
-import Login from '../Pages/Userside/login';
-import Signup from '../Pages/Userside/signup';
-import Forgotpassword from '../Pages/Userside/forgotpsaaword';
-import Resetpassword from '../Pages/Userside/resetpassword';
-import DescribeQuestion from '../Pages/Userside/questions/describebest';
-import BusinessQuestion from '../Pages/Userside/questions/business';
-import NoofpeopleQuestion from '../Pages/Userside/questions/noofpeople';
-import RoleQuestion from '../Pages/Userside/questions/role';
-import Connecttools from '../Pages/Userside/connecttools';
-import Savedcontent from '../Pages/Userside/dashboard/savedcontent';
-import Layout from '../Pages/Layout';
-import Sizeofcompany from '../Pages/Userside/questions/sizeofcompany';
-// const Layout = lazy(() => import('../Components/Layout'));
+
+const Login = lazy(() => import('../Pages/Userside/login'));
+const Signup = lazy(() => import('../Pages/Userside/signup'));
+const Forgotpassword = lazy(() => import('../Pages/Userside/forgotpsaaword'));
+const Resetpassword = lazy(() => import('../Pages/Userside/resetpassword'));
+const DescribeQuestion = lazy(() =>
+  import('../Pages/Userside/questions/describebest')
+);
+const BusinessQuestion = lazy(() =>
+  import('../Pages/Userside/questions/business')
+);
+const NoofpeopleQuestion = lazy(() =>
+  import('../Pages/Userside/questions/noofpeople')
+);
+const RoleQuestion = lazy(() => import('../Pages/Userside/questions/role'));
+const Connecttools = lazy(() => import('../Pages/Userside/connecttools'));
+const Savedcontent = lazy(() =>
+  import('../Pages/Userside/dashboard/savedcontent')
+);
+const Sizeofcompany = lazy(() =>
+  import('../Pages/Userside/questions/sizeofcompany')
+);
 
 const usersideRouter = [
   {
@@ -57,17 +65,7 @@ const usersideRouter = [
   },
   {
     path: '/saved-content',
-    element: (
-      <Layout
-        sidebar={<Sidebar />}
-        // heading={
-        //   <h1 className="text-xl font-semibold text-[#16151C]">All Videos</h1>
-        // }
-        // subHeading={<h2></h2>}
-      >
-        <Savedcontent />
-      </Layout>
-    ),
+    element: <Savedcontent />,
   },
 ];
 
