@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import DefaultLayout from '../Layout/defaultlayout';
+import YoutubeConnectionDetails from '../Pages/Userside/dashboard/youtubeconnectiondetails';
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
 const Signup = lazy(() => import('../Pages/Userside/signup'));
@@ -21,9 +22,6 @@ const Savedcontent = lazy(() =>
 );
 const Sizeofcompany = lazy(() =>
   import('../Pages/Userside/questions/sizeofcompany')
-);
-const YoutubeConnectionDetails = lazy(() =>
-  import('../Pages/Userside/dashboard/YoutubeConnectionDetails')
 );
 
 const usersideRouter = [
