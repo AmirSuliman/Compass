@@ -23,7 +23,7 @@ const Sizeofcompany = lazy(() =>
   import('../Pages/Userside/questions/sizeofcompany')
 );
 const YoutubeConnectionDetails = lazy(() =>
-  import('../Pages/Userside/dashboard/youtubeconnectiondetails')
+  import('../Pages/Userside/dashboard/YoutubeConnectionDetails')
 );
 
 const usersideRouter = [
@@ -73,7 +73,7 @@ const usersideRouter = [
   },
   {
     path: '/youtube-connection-details',
-    element: <YoutubeConnectionDetails />
+    element: <YoutubeConnectionDetails />,
   },
   {
     path: '/user/inbox',
