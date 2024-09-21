@@ -21,6 +21,9 @@ const Savedcontent = lazy(() =>
 const Sizeofcompany = lazy(() =>
   import('../Pages/Userside/questions/sizeofcompany')
 );
+const YoutubeConnectionDetails = lazy(() =>
+  import('../Pages/Userside/dashboard/youtubeconnectiondetails')
+);
 
 const usersideRouter = [
   {
@@ -67,6 +70,10 @@ const usersideRouter = [
     path: '/saved-content',
     element: <Savedcontent />,
   },
+  {
+    path: '/youtube-connection-details',
+    element: <YoutubeConnectionDetails />
+  }
 ];
 
 export default { routes: usersideRouter };
