@@ -23,7 +23,7 @@ const Sizeofcompany = lazy(() =>
   import("../Pages/Userside/questions/sizeofcompany")
 )
 const YoutubeConnectionDetails = lazy(() =>
-  import("../Pages/Userside/dashboard/youtubeconnectiondetails")
+  import("../Pages/Userside/dashboard/youtubeConnectionDetails")
 )
 
 const usersideRouter = [
