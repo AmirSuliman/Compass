@@ -9,12 +9,13 @@ import {
 import {
   BarChart,
   Bar,
-  ResponsiveContainer,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
-  Tooltip,
-  Legend,
   CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
 } from "recharts"
 
 const YoutubeConnectionDetails = () => {
@@ -28,22 +29,21 @@ const YoutubeConnectionDetails = () => {
   ]
 
   const data = [
-    { name: "Dec 18", uv: 12000 },
-    { name: "Dec 19", uv: 28000 },
-    { name: "Dec 20", uv: 18000 },
-    { name: "Dec 21", uv: 3000 },
-    { name: "Dec 22", uv: 1500 },
-    { name: "Dec 23", uv: 18000 },
-    { name: "Dec 24", uv: 17000 },
-    { name: "Dec 24", uv: 17000 },
-    { name: "Dec 24", uv: 17000 },
-    { name: "Dec 24", uv: 17000 },
-    { name: "Dec 24", uv: 17000 },
+    { name: "Dec 18", uv: 12000, revenue: 2000 },
+    { name: "Dec 19", uv: 28000, revenue: 4000 },
+    { name: "Dec 20", uv: 18000, revenue: 6000 },
+    { name: "Dec 21", uv: 3000, revenue: 8000 },
+    { name: "Dec 22", uv: 1500, revenue: 9000 },
+    { name: "Dec 23", uv: 18000, revenue: 12000 },
+    { name: "Dec 24", uv: 17000, revenue: 15000 },
+    { name: "Dec 24", uv: 17000, revenue: 14000 },
+    { name: "Dec 24", uv: 17000, revenue: 13000 },
+    { name: "Dec 24", uv: 17000, revenue: 12000 },
+    { name: "Dec 24", uv: 17000, revenue: 15000 },
   ]
 
   return (
-    <DefaultLayout>
-      {/* Tabs */}
+    <div>
       <div className='w-full border-b border-gray-300'>
         <div className='flex space-x-8'>
           {tabs.map((tab) => (
@@ -131,9 +131,9 @@ const YoutubeConnectionDetails = () => {
           </div>
         </div>
 
-        {/* Updated ResponsiveContainer with fixed height */}
-        <div className='h-64 mt-4'>
-          <ResponsiveContainer width='100%' height={400}>
+        {/* First Chart: Bar Chart */}
+        <div className='h-96 mt-6'>
+          <ResponsiveContainer width='100%' height='100%'>
             <BarChart data={data}>
               <CartesianGrid
                 vertical={true}
@@ -147,13 +147,34 @@ const YoutubeConnectionDetails = () => {
                 dataKey='uv'
                 fill='#4285F4'
                 radius={[100, 100, 0, 0]}
-                barSize={20}
+                barSize={15}
               />
             </BarChart>
           </ResponsiveContainer>
         </div>
+
+        {/* Second Chart: Line Chart */}
+        <div className='h-96 mt-10'>
+          <ResponsiveContainer width='100%' height='100%'>
+            <LineChart data={data}>
+              {/* Horizontal dashed grid lines */}
+              <CartesianGrid strokeDasharray='3 3' vertical={false} />
+              <XAxis dataKey='name' tick={{ fontSize: 12 }} />
+              <YAxis tickFormatter={(value) => `$${value}`} />
+              <Tooltip formatter={(value) => `$${value}`} />
+              <Line
+                type='monotone'
+                dataKey='revenue'
+                stroke='#FFA500'
+                strokeWidth={3}
+                dot={{ stroke: "#fff", strokeWidth: 2, r: 5 }}
+                activeDot={{ r: 8 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </div>
-    </DefaultLayout>
+    </div>
   )
 }
 
