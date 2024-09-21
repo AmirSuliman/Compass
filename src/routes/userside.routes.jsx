@@ -72,6 +72,10 @@ const usersideRouter = [
     element: <Savedcontent />,
   },
   {
+    path: '/youtube-connection-details',
+    element: <YoutubeConnectionDetails />
+  },
+  {
     path: '/user/inbox',
     element: (
       <DefaultLayout>
@@ -79,10 +83,6 @@ const usersideRouter = [
       </DefaultLayout>
     ),
   },
-  {
-    path: '/youtube-connection-details',
-    element: <YoutubeConnectionDetails />
-  }
 ];
 
 export default { routes: usersideRouter };
