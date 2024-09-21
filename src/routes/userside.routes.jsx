@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import DefaultLayout from '../Layout/defaultlayout';
-import YoutubeConnectionDetails from '../Pages/Userside/dashboard/YoutubeConnectionDetails';
+// import YoutubeConnectionDetails from '../Pages/Userside/dashboard/YoutubeConnectionDetails';
 
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
@@ -70,10 +70,10 @@ const usersideRouter = [
     path: '/saved-content',
     element: <Savedcontent />,
   },
-  {
-    path: '/youtube-connection-details',
-    element: <YoutubeConnectionDetails />,
-  },
+  // {
+  //   path: '/youtube-connection-details',
+  //   element: <YoutubeConnectionDetails />,
+  // },
   {
     path: '/user/inbox',
     element: (
