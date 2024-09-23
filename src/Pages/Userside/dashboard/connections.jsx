@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DefaultLayout from "../../../Layout/defaultlayout";
 import Socials from "./components/socials";
 
 const Connections = () => {
@@ -12,7 +11,7 @@ const Connections = () => {
   };
 
   return (
-    <DefaultLayout>
+    <>
       <div className="flex flex-col gap-4">
         <h1 className="text-[26px] font-semibold">Connected Socials</h1>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -83,8 +82,8 @@ const Connections = () => {
           </div>
         )}
       </div>
-    </DefaultLayout>
-  );
+      </>
+    );
 };
 
 export default Connections;

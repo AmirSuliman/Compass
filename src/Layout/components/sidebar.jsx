@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
-  Grid,
   Calendar,
   Settings,
   CircleHelp,
@@ -12,7 +11,7 @@ import {
   Menu,
 } from 'lucide-react';
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
+const Sidebar = () => {
   const location = useLocation();
   const { pathname } = location;
   const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 768);
@@ -99,13 +98,13 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             {/* Menu Item: Connections */}
             <li
               className={`${
-                pathname.includes('/saved-content') ? 'bg-black rounded-md' : ''
+                pathname.includes('/user/overview') ? 'bg-black rounded-md' : ''
               } rounded-sm`}
             >
               <NavLink
-                to="/saved-content"
+                to="/user/overview"
                 className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/saved-content')
+                  pathname.includes('/user/overview')
                     ? 'text-white'
                     : 'text-[#8EA1B3]'
                 } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect

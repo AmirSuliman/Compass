@@ -1,6 +1,8 @@
 import { lazy } from 'react';
 import DefaultLayout from '../Layout/UserLayout';
+import SearchInput from '../Layout/components/SearchInput';
 import Tabs from '../Pages/Userside/Inbox/Components/Tabs';
+import Userdashboard from '../Pages/Userside/dashboard/Userdashboard';
 
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
@@ -28,6 +30,10 @@ const Youtubedetails = lazy(() =>
   import('../Pages/Userside/youtubedetails/youtubedetails')
 );
 
+const Overview = lazy(() => import('../Pages/Userside/dashboard/overview'));
+const Connections = lazy(() =>
+  import('../Pages/Userside/dashboard/connections')
+);
 const usersideRouter = [
   {
     path: '/',
@@ -70,11 +76,39 @@ const usersideRouter = [
     element: <Connecttools />,
   },
   {
-    path: '/saved-content',
-    element: <Savedcontent />,
+    path: '/user/overview/saved-content',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Savedcontent />
+      </DefaultLayout>
+    ),
   },
   {
-    path: '/user/analytics',
+    path: '/user/overview/connection',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Connections />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/overview',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Overview />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user-dashboard',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Userdashboard />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/overview/analytics',
     element: (
       <DefaultLayout headerChildren={<Tabs />}>
         <Youtubedetails />

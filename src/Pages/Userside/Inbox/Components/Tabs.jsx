@@ -15,10 +15,10 @@ const Tabs = () => {
     <nav className="flex gap-4 flex-wrap md:flex-nowrap [&_button]:border-none [&_button]:text-sm [&_button]:font-medium">
       <button
         onClick={() => {
-          handleNavigate('/user/analytics');
+          handleNavigate('/user/overview/analytics');
         }}
         className={`flex items-center gap-2 px-4 py-2 rounded-lg ${
-          activeButton === '/user/analytics'
+          activeButton === '/user/overview/analytics'
             ? '!bg-Yellow text-black'
             : 'bg-light-gray text-medium-gray'
         }`}

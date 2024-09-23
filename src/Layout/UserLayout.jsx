@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
 
-const UserLayout = ({ children, headerChildren }) => {
+const DefaultLayout = ({ children, headerChildren }) => {
   return (
     <div className="flex flex-row h-screen relative w-full overflow-hidden bg-[#f8f8f8] text-black">
       <Sidebar />
@@ -18,4 +18,4 @@ const UserLayout = ({ children, headerChildren }) => {
   );
 };
 
-export default UserLayout;
+export default DefaultLayout;
