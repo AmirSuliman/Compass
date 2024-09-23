@@ -1,10 +1,10 @@
 import { Filter } from 'lucide-react';
-import Tabs from './Tabs';
+import SearchInput from '../../../../Layout/components/SearchInput';
 
 const Header = () => {
   return (
-    <header className="flex flex-wrap items-center gap-4">
-      <Tabs />
+    <header className="flex flex-wrap md:flex-nowrap items-center gap-4">
+      <SearchInput />
       <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border-[0.5px] border-light-gray font-medium text-xs ml-auto mr-0">
         <Filter size={18} />
         Filter

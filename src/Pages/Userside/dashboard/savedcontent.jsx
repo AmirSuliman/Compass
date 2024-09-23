@@ -1,5 +1,5 @@
-import DefaultLayout from "../../../Layout/defaultlayout";
-import { Copy, SquareArrowOutUpRight, Files } from "lucide-react";
+import DefaultLayout from '../../../Layout/UserLayout';
+import { Copy, SquareArrowOutUpRight, Files } from 'lucide-react';
 
 const Savedcontent = () => {
   return (
@@ -23,11 +23,12 @@ const Savedcontent = () => {
               {/* SquareArrowOutUpRight Icon and Label */}
               <div className="flex flex-row gap-2 items-center justify-center">
                 <SquareArrowOutUpRight size={12} className="text-gray-400" />
-                <p className="text-[12px]">Share</p> {/* Changed the label here */}
+                <p className="text-[12px]">Share</p>{' '}
+                {/* Changed the label here */}
               </div>
             </div>
           </div>
-          <Copy size={22} className="text-gray-400 sm:ml-8"/>
+          <Copy size={22} className="text-gray-400 sm:ml-8" />
         </div>
 
         <div className="flex flex-row gap-4  items-center ">
@@ -46,11 +47,12 @@ const Savedcontent = () => {
               {/* SquareArrowOutUpRight Icon and Label */}
               <div className="flex flex-row gap-2 items-center justify-center">
                 <SquareArrowOutUpRight size={12} className="text-gray-400" />
-                <p className="text-[12px]">Share</p> {/* Changed the label here */}
+                <p className="text-[12px]">Share</p>{' '}
+                {/* Changed the label here */}
               </div>
             </div>
           </div>
-          <Copy size={22} className="text-gray-400 sm:ml-8"/>
+          <Copy size={22} className="text-gray-400 sm:ml-8" />
         </div>
 
         <div className="flex flex-row gap-4  items-center ">
@@ -69,11 +71,12 @@ const Savedcontent = () => {
               {/* SquareArrowOutUpRight Icon and Label */}
               <div className="flex flex-row gap-2 items-center justify-center">
                 <SquareArrowOutUpRight size={12} className="text-gray-400" />
-                <p className="text-[12px]">Share</p> {/* Changed the label here */}
+                <p className="text-[12px]">Share</p>{' '}
+                {/* Changed the label here */}
               </div>
             </div>
           </div>
-          <Copy size={22} className="text-gray-400 sm:ml-8"/>
+          <Copy size={22} className="text-gray-400 sm:ml-8" />
         </div>
 
         <div className="flex flex-row gap-4  items-center ">
@@ -92,11 +95,12 @@ const Savedcontent = () => {
               {/* SquareArrowOutUpRight Icon and Label */}
               <div className="flex flex-row gap-2 items-center justify-center">
                 <SquareArrowOutUpRight size={12} className="text-gray-400" />
-                <p className="text-[12px]">Share</p> {/* Changed the label here */}
+                <p className="text-[12px]">Share</p>{' '}
+                {/* Changed the label here */}
               </div>
             </div>
           </div>
-          <Copy size={22} className="text-gray-400 sm:ml-8 "/>
+          <Copy size={22} className="text-gray-400 sm:ml-8 " />
         </div>
       </div>
     </DefaultLayout>
