@@ -25,7 +25,12 @@ const Sizeofcompany = lazy(() =>
 const YoutubeConnectionDetails = lazy(() =>
   import('../Pages/Userside/dashboard/youtubeconnectiondetails')
 );
-
+const Overview = lazy(()=>
+import('../Pages/Userside/dashboard/overview')
+)
+const Connections = lazy(()=>
+import('../Pages/Userside/dashboard/connections')
+)
 const usersideRouter = [
   {
     path: '/',
@@ -70,6 +75,14 @@ const usersideRouter = [
   {
     path: '/saved-content',
     element: <Savedcontent />,
+  },
+  {
+    path: '/overview',
+    element: <Overview/>
+  },
+  {
+    path: '/connections',
+    element: <Connections />
   },
   {
     path: '/youtube-connection-details',
