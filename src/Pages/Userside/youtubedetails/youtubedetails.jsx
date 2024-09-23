@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import DefaultLayout from "../../../Layout/defaultlayout"
 import {
   ChartNoAxesCombined,
   MoveUpRight,
@@ -18,7 +17,7 @@ import {
   ResponsiveContainer,
 } from "recharts"
 
-const YoutubeConnectionDetails = () => {
+const Youtubedetails = () => {
   const [activeTab, setActiveTab] = useState("Community")
 
   const tabs = [
@@ -72,22 +71,22 @@ const YoutubeConnectionDetails = () => {
 
       <div className='bg-white py-4 px-8 rounded-md mt-6'>
         <div>
-          <div className='font-bold'>Growth</div>
+          <div className='text-xl font-bold'>Growth</div>
           <div className='flex justify-between'>
             <div>
               <div className='font-semibold'>Net Growth</div>
-              <div>Jun 2023 - Dec 2023</div>
+              <div className="text-sm">Jun 2023 - Dec 2023</div>
             </div>
             <div className='flex gap-4'>
               <div className='flex gap-4 border border-gray-300 rounded-md p-4'>
                 <div>
                   <ChartNoAxesCombined color='blue' />
-                  <div>Growth</div>
+                  <div className="text-xs">Growth</div>
                 </div>
                 <div>
                   <div className='font-bold'>23,430</div>
                   <div className='flex text-xs'>
-                    <span>+412</span>
+                    <span className="text-xs">+412</span>
                     <span className='flex'>
                       <MoveUpRight color='blue' size={16} />
                       <span className='text-blue-500'>23%</span>
@@ -98,12 +97,12 @@ const YoutubeConnectionDetails = () => {
               <div className='flex gap-4 border border-gray-300 rounded-md p-4'>
                 <div>
                   <UserPlus color='blue' />
-                  <div>Follow</div>
+                  <div className="text-xs">Follow</div>
                 </div>
                 <div>
                   <div className='font-bold'>23,430</div>
                   <div className='flex text-xs'>
-                    <span>+412</span>
+                    <span className="text-xs">+412</span>
                     <span className='flex'>
                       <MoveUpRight color='blue' size={16} />
                       <span className='text-blue-500'>23%</span>
@@ -114,12 +113,12 @@ const YoutubeConnectionDetails = () => {
               <div className='flex gap-4 border border-gray-300 rounded-md p-4'>
                 <div>
                   <UserRoundMinus color='blue' />
-                  <div>Unfollow</div>
+                  <div className="text-xs">Unfollow</div>
                 </div>
                 <div>
                   <div className='font-bold'>23,430</div>
                   <div className='flex text-xs'>
-                    <span>+412</span>
+                    <span className="text-xs">+412</span>
                     <span className='flex'>
                       <MoveUpRight color='blue' size={16} />
                       <span className='text-blue-500'>23%</span>
@@ -178,4 +177,4 @@ const YoutubeConnectionDetails = () => {
   )
 }
 
-export default YoutubeConnectionDetails
+export default Youtubedetails
