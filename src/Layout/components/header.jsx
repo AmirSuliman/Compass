@@ -1,4 +1,4 @@
-import { ChevronDown } from 'lucide-react';
+import { Bell, ChevronDown } from 'lucide-react';
 
 const Header = ({ children }) => {
   return (
@@ -14,21 +14,21 @@ const Header = ({ children }) => {
       {children}
 
       {/* Notification Icon */}
-      <div className="bg-white rounded-full p-3 shadow-md">
-        <img src="/bell-01.png" alt="Notification Icon" className="h-6 w-6" />
-      </div>
+      <button className="bg-white rounded-full p-3 shadow-md aspect-square grow-0 shrink-0 flex items-center justify-center">
+        <Bell />
+      </button>
 
       {/* Profile Avatar */}
-      <div className="bg-[#FDC546] rounded-full p-1 shadow-md">
+      <button className="bg-[#FDC546] w-12 h-12 aspect-square grow-0 shrink-0 flex items-center justify-center rounded-full shadow-md">
         <img
           src="/Memoji Boys 6-18.png"
           alt="Profile Avatar"
-          className="h-10 w-10"
+          className="h-10 w-10 rounded-full"
         />
-      </div>
+      </button>
 
       {/* Dropdown Icon */}
-      <ChevronDown className="text-gray-400" />
+      <ChevronDown className="text-gray-400 cursor-pointer" />
     </header>
   );
 };

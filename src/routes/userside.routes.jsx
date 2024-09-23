@@ -8,73 +8,73 @@ const Signup = lazy(() => import('../Pages/Userside/signup'));
 const Forgotpassword = lazy(() => import('../Pages/Userside/forgotpsaaword'));
 const Resetpassword = lazy(() => import('../Pages/Userside/resetpassword'));
 const DescribeQuestion = lazy(() =>
-  import("../Pages/Userside/questions/describebest")
-)
+  import('../Pages/Userside/questions/describebest')
+);
 const BusinessQuestion = lazy(() =>
-  import("../Pages/Userside/questions/business")
-)
+  import('../Pages/Userside/questions/business')
+);
 const NoofpeopleQuestion = lazy(() =>
-  import("../Pages/Userside/questions/noofpeople")
-)
-const RoleQuestion = lazy(() => import("../Pages/Userside/questions/role"))
-const Connecttools = lazy(() => import("../Pages/Userside/connecttools"))
+  import('../Pages/Userside/questions/noofpeople')
+);
+const RoleQuestion = lazy(() => import('../Pages/Userside/questions/role'));
+const Connecttools = lazy(() => import('../Pages/Userside/connecttools'));
 const Savedcontent = lazy(() =>
-  import("../Pages/Userside/dashboard/savedcontent")
-)
+  import('../Pages/Userside/dashboard/savedcontent')
+);
 const Sizeofcompany = lazy(() =>
-  import("../Pages/Userside/questions/sizeofcompany")
-)
+  import('../Pages/Userside/questions/sizeofcompany')
+);
 const Youtubedetails = lazy(() =>
-  import("../Pages/Userside/youtubedetails/youtubedetails")
-)
+  import('../Pages/Userside/youtubedetails/youtubedetails')
+);
 
 const usersideRouter = [
   {
-    path: "/",
+    path: '/',
     element: <Login />,
   },
   {
-    path: "/signup",
+    path: '/signup',
     element: <Signup />,
   },
   {
-    path: "/forgot-password",
+    path: '/forgot-password',
     element: <Forgotpassword />,
   },
   {
-    path: "/reset-password",
+    path: '/reset-password',
     element: <Resetpassword />,
   },
   {
-    path: "/question",
+    path: '/question',
     element: <DescribeQuestion />,
   },
   {
-    path: "/Busniess",
+    path: '/Busniess',
     element: <BusinessQuestion />,
   },
   {
-    path: "/people",
+    path: '/people',
     element: <NoofpeopleQuestion />,
   },
   {
-    path: "/role",
+    path: '/role',
     element: <RoleQuestion />,
   },
   {
-    path: "/companysize",
+    path: '/companysize',
     element: <Sizeofcompany />,
   },
   {
-    path: "/connect-tools",
+    path: '/connect-tools',
     element: <Connecttools />,
   },
   {
-    path: "/saved-content",
+    path: '/saved-content',
     element: <Savedcontent />,
   },
   {
-    path: "/youtube-connection-details",
+    path: '/user/analytics',
     element: (
       <DefaultLayout headerChildren={<Tabs />}>
         <Youtubedetails />
@@ -82,13 +82,13 @@ const usersideRouter = [
     ),
   },
   {
-    path: "/user/inbox",
+    path: '/user/inbox',
     element: (
       <DefaultLayout headerChildren={<Tabs />}>
         <Inbox />
       </DefaultLayout>
     ),
   },
-]
+];
 
-export default { routes: usersideRouter }
+export default { routes: usersideRouter };
