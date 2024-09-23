@@ -4,7 +4,7 @@ import {
   MoveUpRight,
   UserPlus,
   UserRoundMinus,
-} from "lucide-react"
+} from 'lucide-react';
 import {
   BarChart,
   Bar,
@@ -21,11 +21,11 @@ const Youtubedetails = () => {
   const [activeTab, setActiveTab] = useState("Community")
 
   const tabs = [
-    "Community",
-    "Published Videos",
-    "Viewed Videos",
-    "Competetiors",
-  ]
+    'Community',
+    'Published Videos',
+    'Viewed Videos',
+    'Competetiors',
+  ];
 
   const data = [
     { name: "Dec 18", uv: 12000, revenue: 2000 },
@@ -50,16 +50,16 @@ const Youtubedetails = () => {
               key={tab}
               className={`pb-2 border-b-2 transition-colors duration-200 cursor-pointer ${
                 activeTab === tab
-                  ? "border-blue-600"
-                  : "border-transparent hover:border-blue-600"
+                  ? 'border-blue-600'
+                  : 'border-transparent hover:border-blue-600'
               }`}
               onClick={() => setActiveTab(tab)}
             >
               <button
                 className={`transition-colors duration-200 ${
                   activeTab === tab
-                    ? "text-blue-600"
-                    : "text-gray-500 hover:text-blue-600"
+                    ? 'text-blue-600'
+                    : 'text-gray-500 hover:text-blue-600'
                 }`}
               >
                 {tab}
@@ -69,7 +69,7 @@ const Youtubedetails = () => {
         </div>
       </div>
 
-      <div className='bg-white py-4 px-8 rounded-md mt-6'>
+      <div className="bg-white py-4 px-8 rounded-md mt-6">
         <div>
           <div className='text-xl font-bold'>Growth</div>
           <div className='flex justify-between'>
@@ -77,8 +77,8 @@ const Youtubedetails = () => {
               <div className='font-semibold'>Net Growth</div>
               <div className="text-sm">Jun 2023 - Dec 2023</div>
             </div>
-            <div className='flex gap-4'>
-              <div className='flex gap-4 border border-gray-300 rounded-md p-4'>
+            <div className="flex gap-4">
+              <div className="flex gap-4 border border-gray-300 rounded-md p-4">
                 <div>
                   <ChartNoAxesCombined color='blue' />
                   <div className="text-xs">Growth</div>
@@ -94,7 +94,7 @@ const Youtubedetails = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex gap-4 border border-gray-300 rounded-md p-4'>
+              <div className="flex gap-4 border border-gray-300 rounded-md p-4">
                 <div>
                   <UserPlus color='blue' />
                   <div className="text-xs">Follow</div>
@@ -110,7 +110,7 @@ const Youtubedetails = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex gap-4 border border-gray-300 rounded-md p-4'>
+              <div className="flex gap-4 border border-gray-300 rounded-md p-4">
                 <div>
                   <UserRoundMinus color='blue' />
                   <div className="text-xs">Unfollow</div>
