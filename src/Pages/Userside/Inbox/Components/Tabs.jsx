@@ -12,7 +12,7 @@ const Tabs = () => {
   };
 
   return (
-    <nav className="flex gap-4 flex-wrap [&_button]:border-none [&_button]:text-sm [&_button]:font-medium">
+    <nav className="flex gap-4 flex-wrap md:flex-nowrap [&_button]:border-none [&_button]:text-sm [&_button]:font-medium">
       <button
         onClick={() => {
           handleNavigate('/user/analytics');

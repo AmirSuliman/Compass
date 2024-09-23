@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DefaultLayout from '../../../Layout/defaultlayout';
+import DefaultLayout from '../../../Layout/UserLayout';
 import {
   ChartNoAxesCombined,
   MoveUpRight,

@@ -1,6 +1,8 @@
 import { lazy } from 'react';
-import DefaultLayout from '../Layout/defaultlayout';
+import DefaultLayout from '../Layout/UserLayout';
 import YoutubeConnectionDetails from '../Pages/Userside/dashboard/YoutubeConnectionDetails';
+import SearchInput from '../Layout/components/SearchInput';
+import Tabs from '../Pages/Userside/Inbox/Components/Tabs';
 
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
@@ -77,7 +79,7 @@ const usersideRouter = [
   {
     path: '/user/inbox',
     element: (
-      <DefaultLayout>
+      <DefaultLayout headerChildren={<Tabs />}>
         <Inbox />
       </DefaultLayout>
     ),
