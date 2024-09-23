@@ -43,8 +43,8 @@ const Overview=()=>{
 
             </div>
 
-            <div className="flex flex-row gap-4 w-full items-center justify-between mt-4">
-                <div className="bg-white rounded-md p-4 w-[65%]">
+            <div className="flex flex-col sm:flex-row gap-4 w-full items-center justify-between mt-4">
+                <div className="bg-white rounded-md p-4 w-full sm:w-[65%]">
                     <h1 className="text-[#555555] text-[18px] mb-6 font-semibold">Followers</h1>
                    <CustomLineChart/>
                 </div>
@@ -54,7 +54,7 @@ const Overview=()=>{
                 </div>
             </div>
 
-            <div className="flex flex-row gap-6 w-full  items-start justify-between mt-4">
+            <div className="flex flex-col sm:flex-row gap-6 w-full  items-start justify-between mt-4">
                 <div className="bg-white w-full h-[370px] p-4 rounded-md" >
                 <h1 className="text-[#555555] text-[18px] mb-6 font-semibold">Statistic By Gender</h1>
                     <GenderStatisticsPieChart/>

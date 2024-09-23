@@ -3,7 +3,7 @@ import {MoveUpRight} from 'lucide-react'
 const Statisticscard =()=>{
 
     return(
-        <div className="flex flex-row gap-3 items-center justify-between mt-6">
+        <div className="flex flex-col sm:flex-row gap-3 items-center justify-between mt-6">
          <div className="bg-[#F8F5F5] shadow-md p-4 rounded-lg w-full">
             
             <div className="bg-white rounded-md  p-2 space-y-1">
