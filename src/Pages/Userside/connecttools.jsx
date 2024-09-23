@@ -10,12 +10,12 @@ const Connecttools = () => {
   };
 
   return (
-    <div className="flex flex-row h-[100vh]">
+    <div className="flex flex-row min-h-screen">
       <div className="w-[45%] hidden sm:flex">
         <Leftsidebar />
       </div>
 
-      <div className="sm:w-[130vh] bg-[#f8f8f8] flex flex-col items-center justify-center">
+      <div className="flex-1 bg-[#f8f8f8] flex flex-col items-center justify-center">
         <div className="p-4 max-w-md w-full text-start mt-4">
           <h1 className="text-[25px] font-bold text-gray-800">Connect your social network</h1>
           <p>Lorem Ipsum ha sido el texto de relleno estándar

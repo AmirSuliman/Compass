@@ -4,14 +4,14 @@ import Leftsidebar from "./components/leftsidebarauth";
 const Resetpassword = () => {
  
   return (
-    <div className="flex flex-row h-[100vh]">
+    <div className="flex flex-row min-h-screen">
       {/* Sidebar with fixed width */}
       <div className="w-[45%] hidden sm:flex">
         <Leftsidebar />
       </div>
 
       {/* Main Content Area */}
-      <div className="sm:w-[130vh] bg-[#f8f8f8] flex flex-col items-center justify-center">
+      <div className="flex-1 bg-[#f8f8f8] flex flex-col items-center justify-center">
         <div className="p-4 max-w-md w-full text-center mt-8">
           <h1 className="text-[40px] font-bold text-gray-800">Reset Password</h1>
           <p className="mb-6 text-[#8D8888]">Lorem Ipsum ha sido el texto de relleno estándar</p>

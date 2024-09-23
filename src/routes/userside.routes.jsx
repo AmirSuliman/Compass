@@ -31,6 +31,9 @@ import('../Pages/Userside/dashboard/overview')
 const Connections = lazy(()=>
 import('../Pages/Userside/dashboard/connections')
 )
+const Userdashboard=lazy(()=>
+import ('../Pages/Userside/dashboard/Userdashboard')
+)
 const usersideRouter = [
   {
     path: '/',
@@ -83,6 +86,10 @@ const usersideRouter = [
   {
     path: '/connections',
     element: <Connections />
+  },
+  {
+    path: '/user-dashboard',
+    element: <Userdashboard/>
   },
   {
     path: '/youtube-connection-details',
