@@ -61,6 +61,9 @@ const Connecttools = () => {
               Back
             </button>
             <button
+              onClick={() => {
+                navigate('/user/overview');
+              }}
               type="submit"
               className="flex flex-row py-2 px-6 bg-blue-500 text-white rounded-full hover:bg-blue-600 items-center justify-center"
             >
