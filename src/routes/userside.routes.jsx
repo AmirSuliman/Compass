@@ -1,7 +1,5 @@
 import { lazy } from 'react';
 import DefaultLayout from '../Layout/UserLayout';
-import YoutubeConnectionDetails from '../Pages/Userside/dashboard/YoutubeConnectionDetails';
-import SearchInput from '../Layout/components/SearchInput';
 import Tabs from '../Pages/Userside/Inbox/Components/Tabs';
 
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
@@ -78,7 +76,7 @@ const usersideRouter = [
   {
     path: "/youtube-connection-details",
     element: (
-      <DefaultLayout>
+      <DefaultLayout headerChildren={<Tabs />}>
         <Youtubedetails />
       </DefaultLayout>
     ),
