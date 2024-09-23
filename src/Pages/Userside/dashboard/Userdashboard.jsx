@@ -1,12 +1,11 @@
-import DefaultLayout from "../../../Layout/defaultlayout";
 import {CalendarDays, Filter} from 'lucide-react'
 import Statisticscard from "./components/dashboardstatistics";
 
 const Userdashboard=()=>{
 
     return(
-        <DefaultLayout>
-            <div className="flex flex-row gap-4 items-center justify-between w-full">
+    <>
+          <div className="flex flex-row gap-4 items-center justify-between w-full">
                 <div className="flex flex-col w-[65%]">
                     <div className="flex flex-row items-center justify-between w-full">
                         <h1 className="text-[27px] text-[#1D1D2E] font-semibold">Marketing Campaign</h1>
@@ -25,7 +24,7 @@ const Userdashboard=()=>{
                 </div>
 
             </div>
-        </DefaultLayout>
+        </>
     )
 }
 export default Userdashboard;

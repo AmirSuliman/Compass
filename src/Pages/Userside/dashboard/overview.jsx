@@ -1,5 +1,4 @@
 import { ChevronDown, Plus } from "lucide-react";
-import DefaultLayout from "../../../Layout/defaultlayout";
 import Cards from "./components/cards";
 import Contenttable from "./components/contenttable";
 import Detailtable from "./components/detailstable";
@@ -12,7 +11,7 @@ import Chart from "./components/profilevisit";
 const Overview=()=>{
 
     return(
-        <DefaultLayout>
+        <>
             <div className="flex flex-col gap-3 -mt-6">
                 <div className="flex flex-col gap-3 sm:flex-row w-full items-center justify-between">
                     <div className="flex flex-row gap-6 items-center justify-center font-semibold">
@@ -70,7 +69,7 @@ const Overview=()=>{
                 </div>
 
             </div>
-        </DefaultLayout>
+            </>
     )
 }
 export default Overview;

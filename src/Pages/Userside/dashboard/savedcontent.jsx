@@ -1,9 +1,8 @@
-import DefaultLayout from '../../../Layout/UserLayout';
 import { Copy, SquareArrowOutUpRight, Files } from 'lucide-react';
 
 const Savedcontent = () => {
   return (
-    <DefaultLayout>
+   <>
       <div className="flex flex-col space-y-8">
         <h1 className="text-[26px] font-semibold mb-6">Saved Content</h1>
 
@@ -103,8 +102,8 @@ const Savedcontent = () => {
           <Copy size={22} className="text-gray-400 sm:ml-8 " />
         </div>
       </div>
-    </DefaultLayout>
-  );
+      </>
+    );
 };
 
 export default Savedcontent;

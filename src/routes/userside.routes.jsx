@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import DefaultLayout from '../Layout/UserLayout';
-import YoutubeConnectionDetails from '../Pages/Userside/dashboard/YoutubeConnectionDetails';
 import SearchInput from '../Layout/components/SearchInput';
 import Tabs from '../Pages/Userside/Inbox/Components/Tabs';
+import Userdashboard from '../Pages/Userside/dashboard/Userdashboard';
 
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
@@ -29,7 +29,12 @@ const Sizeofcompany = lazy(() =>
 const Youtubedetails = lazy(() =>
   import("../Pages/Userside/youtubedetails/youtubedetails")
 )
-
+const Overview = lazy(() =>
+  import("../Pages/Userside/dashboard/overview")
+)
+const Connections = lazy(() =>
+  import("../Pages/Userside/dashboard/connections")
+)
 const usersideRouter = [
   {
     path: "/",
@@ -73,13 +78,37 @@ const usersideRouter = [
   },
   {
     path: "/saved-content",
-    element: <Savedcontent />,
+    element: 
+    <DefaultLayout  headerChildren={<SearchInput />}>
+     <Savedcontent />
+    </DefaultLayout>
+  },
+  {
+    path: "/connection",
+    element:
+    <DefaultLayout headerChildren={<SearchInput />}>
+       <Connections />
+    </DefaultLayout>
+  },
+  {
+    path: "/overview",
+    element:
+    <DefaultLayout  headerChildren={<SearchInput />}>
+    <Overview/>
+    </DefaultLayout>
+  },
+  {
+    path: "/user-dashboard",
+    element: 
+    <DefaultLayout headerChildren={<SearchInput />}>
+    <Userdashboard />
+    </DefaultLayout>
   },
   {
     path: "/youtube-connection-details",
     element: (
       <DefaultLayout>
-        <Youtubedetails />
+        <Youtubedetails/>
       </DefaultLayout>
     ),
   },
