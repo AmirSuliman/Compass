@@ -1,11 +1,14 @@
 import {MoveUpRight} from 'lucide-react'
+import GaugeChart from './allmailschart';
+import SocialGaugeChart from './socialmedia';
+import WebsiteGaugeChart from './allwebsites';
 
 const Statisticscard =()=>{
 
     return(
         <div className="flex flex-col sm:flex-row gap-3 items-center justify-between mt-6">
          <div className="bg-[#F8F5F5] shadow-md p-4 rounded-lg w-full">
-            
+            <GaugeChart/>
             <div className="bg-white rounded-md  p-2 space-y-1">
                 <p className='text-[#272727] font-medium text-sm'>Received Mails</p>
                 <h1 className='font-bold text-[16px]'>2,218</h1>
@@ -21,9 +24,9 @@ const Statisticscard =()=>{
          </div>
 
          <div className="bg-[#F8F5F5] shadow-md p-4 rounded-lg w-full">
-            
+            <SocialGaugeChart/>
             <div className="bg-white rounded-md  p-2 space-y-1">
-                <p className='text-[#272727] font-medium text-sm'>Received Mails</p>
+                <p className='text-[#272727] font-medium text-sm'>Account Reached</p>
                 <h1 className='font-bold text-[16px]'>2,218</h1>
                 <div className="flex flex-row items-center justify-between text-[10px]">
                    <p className='text-[#838181] '>Compared from last week</p>
@@ -37,9 +40,9 @@ const Statisticscard =()=>{
          </div>
 
          <div className="bg-[#F8F5F5] shadow-md p-4 rounded-lg w-full">
-            
+            <WebsiteGaugeChart/>
             <div className="bg-white rounded-md  p-2 space-y-1">
-                <p className='text-[#272727] font-medium text-sm'>Received Mails</p>
+                <p className='text-[#272727] font-medium text-sm'>Engagment</p>
                 <h1 className='font-bold text-[16px]'>2,218</h1>
                 <div className="flex flex-row items-center justify-between text-[10px]">
                    <p className='text-[#838181] '>Compared from last week</p>

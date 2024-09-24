@@ -3,7 +3,12 @@ import DefaultLayout from '../Layout/UserLayout';
 import SearchInput from '../Layout/components/SearchInput';
 import Tabs from '../Pages/Userside/Inbox/Components/Tabs';
 import Userdashboard from '../Pages/Userside/dashboard/Userdashboard';
-
+import Survey from '../Pages/Userside/Suggestionandsurvey/survey';
+import Profile from '../Pages/Userside/setting/profile';
+import Setting from '../Pages/Userside/setting/Setting';
+import Verifyemailandphone from '../Pages/Userside/setting/emailandphoneverification';
+import Otp from '../Pages/Userside/setting/otp';
+const Notification = lazy(()=>import('../Pages/Userside/setting/notification'))
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
 const Signup = lazy(() => import('../Pages/Userside/signup'));
@@ -34,6 +39,8 @@ const Overview = lazy(() => import('../Pages/Userside/dashboard/overview'));
 const Connections = lazy(() =>
   import('../Pages/Userside/dashboard/connections')
 );
+const UserSidescreen = lazy(()=>import ('../Pages/Userside/usersidescreen/selectplatform'))
+const Suggestion = lazy (()=>import('../Pages/Userside/Suggestionandsurvey/suggestion'))
 const usersideRouter = [
   {
     path: '/',
@@ -96,6 +103,70 @@ const usersideRouter = [
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <Overview />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/select-platform',
+    element: (
+      <DefaultLayout >
+        <UserSidescreen/>
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/suggestion',
+    element: (
+      <DefaultLayout >
+        <Suggestion />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/survey',
+    element: (
+      <DefaultLayout >
+        <Survey />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/profile',
+    element: (
+      <DefaultLayout >
+        <Profile />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/setting',
+    element: (
+      <DefaultLayout >
+        <Setting />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/verification',
+    element: (
+      <DefaultLayout >
+        <Verifyemailandphone />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/otp',
+    element: (
+      <DefaultLayout >
+        <Otp />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/notification',
+    element: (
+      <DefaultLayout >
+        <Notification />
       </DefaultLayout>
     ),
   },
