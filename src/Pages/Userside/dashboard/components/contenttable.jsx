@@ -10,7 +10,7 @@ const Contenttable = () => {
         <h2 className="text-[#555555] font-medium text-[18px]">Content</h2>
         <button
           onClick={() => {
-            navigate('/overview/saved-content');
+            navigate('/user/overview/saved-content');
           }}
           className="text-[#686D7D] text-sm font-medium"
         >

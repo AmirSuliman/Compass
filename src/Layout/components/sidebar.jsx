@@ -54,142 +54,102 @@ const Sidebar = () => {
         </NavLink>
 
         <nav className="px-4 no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
-          <ul className="flex flex-col mt-8 text-gray-500 ">
-            <h1 className="text-sm text-black font-medium ml-8">ANALYTICAL</h1>
+          <h1 className="text-sm text-black font-medium ml-8">ANALYTICAL</h1>
 
-            {/* Menu Item: Performance */}
-            <li
-              className={`${
-                pathname.includes('/dashboard') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/dashboard')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <Gauge size={22} />
-                <span>Performance</span>
-              </NavLink>
-            </li>
+          {/* Menu Item: Performance */}
+          <NavLink
+            to="/"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/dashboard')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <Gauge size={22} />
+            <span>Performance</span>
+          </NavLink>
 
-            {/* Menu Item: Dashboard */}
-            <li
-              className={`${
-                pathname.includes('/project') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/project')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <LayoutDashboard size={22} />
-                <span>Dashboard</span>
-              </NavLink>
-            </li>
+          {/* Menu Item: Dashboard */}
+          <NavLink
+            to="/user-dashboard"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/user-dashboard')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <LayoutDashboard size={22} />
+            <span>Dashboard</span>
+          </NavLink>
 
-            {/* Menu Item: Connections */}
-            <li
-              className={`${
-                pathname.includes('/user/overview') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/user/overview"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/user/overview')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <CalendarClock size={22} />
-                <span>Connections</span>
-              </NavLink>
-            </li>
+          {/* Menu Item: Connections */}
 
-            {/* Menu Item: Brand Setting */}
-            <li
-              className={`${
-                pathname.includes('/brand-setting') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/brand-setting')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <SaveAll size={22} />
-                <span>Brand setting</span>
-              </NavLink>
-            </li>
+          <NavLink
+            to="/user/overview"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/user/overview')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <CalendarClock size={22} />
+            <span>Connections</span>
+          </NavLink>
 
-            {/* Menu Item: Support */}
-            <li
-              className={`${
-                pathname.includes('/support') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/support')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <CircleHelp size={22} />
-                <span>Support</span>
-              </NavLink>
-            </li>
+          {/* Menu Item: Brand Setting */}
 
-            {/* Menu Item: Setting */}
-            <li
-              className={`${
-                pathname.includes('/settings') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/settings')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <Settings size={22} />
-                <span>Setting</span>
-              </NavLink>
-            </li>
+          <NavLink
+            to="/"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/brand-setting')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <SaveAll size={22} />
+            <span>Brand setting</span>
+          </NavLink>
 
-            {/* Menu Item: Calendar */}
-            <li
-              className={`${
-                pathname.includes('/calendar') ? 'bg-black rounded-md' : ''
-              } rounded-sm`}
-            >
-              <NavLink
-                to="/"
-                className={`flex items-center gap-6 px-8 py-4 font-medium ${
-                  pathname.includes('/calendar')
-                    ? 'text-white'
-                    : 'text-[#8EA1B3]'
-                } hover:text-[#8EA1B3] hover:bg-transparent`} // Removes hover blue effect
-              >
-                <Calendar size={22} />
-                <span>Calendar</span>
-              </NavLink>
-            </li>
-          </ul>
+          {/* Menu Item: Support */}
+
+          <NavLink
+            to="/"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/support')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <CircleHelp size={22} />
+            <span>Support</span>
+          </NavLink>
+
+          {/* Menu Item: Setting */}
+          <NavLink
+            to="/"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/settings')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <Settings size={22} />
+            <span>Setting</span>
+          </NavLink>
+
+          {/* Menu Item: Calendar */}
+
+          <NavLink
+            to="/"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/calendar')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <Calendar size={22} />
+            <span>Calendar</span>
+          </NavLink>
         </nav>
       </aside>
     </>

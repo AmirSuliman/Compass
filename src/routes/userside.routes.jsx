@@ -8,7 +8,10 @@ import Profile from '../Pages/Userside/setting/profile';
 import Setting from '../Pages/Userside/setting/Setting';
 import Verifyemailandphone from '../Pages/Userside/setting/emailandphoneverification';
 import Otp from '../Pages/Userside/setting/otp';
-const Notification = lazy(()=>import('../Pages/Userside/setting/notification'))
+import Planning from '../Pages/Userside/Planning/Planning';
+const Notification = lazy(() =>
+  import('../Pages/Userside/setting/notification')
+);
 const Inbox = lazy(() => import('../Pages/Userside/Inbox/Inbox'));
 const Login = lazy(() => import('../Pages/Userside/login'));
 const Signup = lazy(() => import('../Pages/Userside/signup'));
@@ -39,8 +42,12 @@ const Overview = lazy(() => import('../Pages/Userside/dashboard/overview'));
 const Connections = lazy(() =>
   import('../Pages/Userside/dashboard/connections')
 );
-const UserSidescreen = lazy(()=>import ('../Pages/Userside/usersidescreen/selectplatform'))
-const Suggestion = lazy (()=>import('../Pages/Userside/Suggestionandsurvey/suggestion'))
+const UserSidescreen = lazy(() =>
+  import('../Pages/Userside/usersidescreen/selectplatform')
+);
+const Suggestion = lazy(() =>
+  import('../Pages/Userside/Suggestionandsurvey/suggestion')
+);
 const usersideRouter = [
   {
     path: '/',
@@ -109,15 +116,15 @@ const usersideRouter = [
   {
     path: '/user/select-platform',
     element: (
-      <DefaultLayout >
-        <UserSidescreen/>
+      <DefaultLayout>
+        <UserSidescreen />
       </DefaultLayout>
     ),
   },
   {
     path: '/user/suggestion',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Suggestion />
       </DefaultLayout>
     ),
@@ -125,7 +132,7 @@ const usersideRouter = [
   {
     path: '/user/survey',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Survey />
       </DefaultLayout>
     ),
@@ -133,7 +140,7 @@ const usersideRouter = [
   {
     path: '/user/profile',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Profile />
       </DefaultLayout>
     ),
@@ -141,7 +148,7 @@ const usersideRouter = [
   {
     path: '/user/setting',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Setting />
       </DefaultLayout>
     ),
@@ -149,7 +156,7 @@ const usersideRouter = [
   {
     path: '/user/verification',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Verifyemailandphone />
       </DefaultLayout>
     ),
@@ -157,7 +164,7 @@ const usersideRouter = [
   {
     path: '/user/otp',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Otp />
       </DefaultLayout>
     ),
@@ -165,7 +172,7 @@ const usersideRouter = [
   {
     path: '/user/notification',
     element: (
-      <DefaultLayout >
+      <DefaultLayout>
         <Notification />
       </DefaultLayout>
     ),
@@ -187,10 +194,18 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/inbox',
+    path: '/user/overview/inbox',
     element: (
       <DefaultLayout headerChildren={<Tabs />}>
         <Inbox />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/overview/planning',
+    element: (
+      <DefaultLayout headerChildren={<Tabs />}>
+        <Planning />
       </DefaultLayout>
     ),
   },
