@@ -25,7 +25,7 @@ const Userdashboard=()=>{
                    <Statisticscard/>
 
 
-                   <div className='bg-white w-full p-4 mt-6 rounded-lg'>
+                   <div className='bg-white w-full p-1 sm:p-4 mt-6 rounded-lg'>
                       <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
                         <h1 className='text-[20px] font-medium'>Insights</h1>
                         <div className='flex flex-col sm:flex-row gap-4'>
@@ -47,7 +47,7 @@ const Userdashboard=()=>{
                         </div>
                       </div>
                       <div className='flex h-[0.5px] w-full bg-gray-300 mt-4 '/>
-                      <div className='flex flex-row items-center justify-between p-4 px-6 w-full mb-4'>
+                      <div className='flex flex-col gap-2 sm:flex-row items-center justify-between p-4 px-6 w-full mb-4'>
                         <div className='flex flex-row gap-6 text-gray-400 text-[12px] font-medium'>
                             <div className='flex flex-row gap-2 items-center justify-center'>
                               <div className='bg-[#3180F5] h-2 w-2 rounded-full'/>
