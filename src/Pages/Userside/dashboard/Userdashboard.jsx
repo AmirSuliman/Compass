@@ -1,4 +1,4 @@
-import {CalendarDays, Filter} from 'lucide-react'
+import {CalendarDays, Filter, Search} from 'lucide-react'
 import Statisticscard from "./components/dashboardstatistics";
 import Discovercontent from './components/discovercontent';
 import {Ellipsis,MoveDown } from 'lucide-react'
@@ -26,9 +26,9 @@ const Userdashboard=()=>{
 
 
                    <div className='bg-white w-full p-4 mt-6 rounded-lg'>
-                      <div className='flex flex-row items-center justify-between w-full'>
-                        <h1>Insights</h1>
-                        <div className='flex flex-row gap-4'>
+                      <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
+                        <h1 className='text-[20px] font-medium'>Insights</h1>
+                        <div className='flex flex-col sm:flex-row gap-4'>
                         <div className='bg-[#E4E4E4] p-2 flex flex-row gap-2 rounded-md border font-medium'>
                             <button className='bg-black px-4 text-white p-2 rounded-md'>
                                 All Mails
@@ -40,11 +40,34 @@ const Userdashboard=()=>{
                             Websites
                             </button>
                         </div>
-                        <button className='flex flex-row px-4 p-2 items-center gap-3 border rounded-lg'>
+                        <button className='flex flex-row px-6 items-center gap-3 border rounded-lg'>
                         <Filter />
                         <p>Filter</p>
                         </button>
                         </div>
+                      </div>
+                      <div className='flex h-[0.5px] w-full bg-gray-300 mt-4 '/>
+                      <div className='flex flex-row items-center justify-between p-4 px-6 w-full mb-4'>
+                        <div className='flex flex-row gap-6 text-gray-400 text-[12px] font-medium'>
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                              <div className='bg-[#3180F5] h-2 w-2 rounded-full'/>
+                              <p>OpenRate</p>
+                            </div>
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                              <div className='bg-[#FDC546] h-2 w-2 rounded-full'/>
+                              <p>CRT</p>
+                            </div>
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                              <div className='bg-[#00AF50] h-2 w-2 rounded-full'/>
+                              <p>Subscribers</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-row bg-[#F5F6FA] p-3 rounded-lg border'>
+                            <input type='serach' placeholder='Search' className='bg-[#F5F6FA]'/>
+                            <Search className='text-[#8EA1B3]'/>
+
+                        </div>
+
                       </div>
 
                     <InsightsChart/>
@@ -80,7 +103,7 @@ const Userdashboard=()=>{
                    <Ellipsis size={32}/>
                    </div>
                    <div 
-                    className='bgimg mt-6 flex-col items-center justify-center w-full' 
+                    className='bgimg mt-10 flex-col items-center justify-center w-full' 
                             style={{ 
                               backgroundImage: `url('/Group 1982249110.png')`, 
                               backgroundSize: 'cover', 
