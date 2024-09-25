@@ -43,7 +43,7 @@ const Suggestion = () => {
               </label>
             </div>
   
-            <div className="text-right">
+            <div className="text-right ">
               <button
                 type="submit"
                 className="bg-[#FDC546] text-black font-medium px-16 py-2 px-4 rounded-full"
