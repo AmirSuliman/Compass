@@ -9,6 +9,9 @@ import Setting from '../Pages/Userside/setting/Setting';
 import Verifyemailandphone from '../Pages/Userside/setting/emailandphoneverification';
 import Otp from '../Pages/Userside/setting/otp';
 import Planning from '../Pages/Userside/Planning/Planning';
+import AIcontentrecomendation from '../Pages/Userside/AIcontent/recomendation';
+import Targetaudience from '../Pages/Userside/AIcontent/targetaudience';
+import AddCompetitors from '../Pages/Userside/AIcontent/addcompititors';
 const Notification = lazy(() =>
   import('../Pages/Userside/setting/notification')
 );
@@ -174,6 +177,30 @@ const usersideRouter = [
     element: (
       <DefaultLayout>
         <Notification />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/Ai-content-recomendation',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput/>}>
+        <AIcontentrecomendation />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/target-audience',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput/>}>
+        <Targetaudience />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/add-competitors',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput/>}>
+        <AddCompetitors />
       </DefaultLayout>
     ),
   },
