@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import Community from "./components/community"
 import PublishedVideos from "./components/publishedvideos"
 import ViewedVideos from "./components/viewedvideos"
+import Competitors from "./components/competitors"
 
 const Youtubedetails = () => {
   const [activeTab, setActiveTab] = useState("Community")
@@ -47,6 +48,8 @@ const Youtubedetails = () => {
       {activeTab === "Published Videos" && <PublishedVideos />}
 
       {activeTab === "Viewed Videos" && <ViewedVideos />}
+
+      {activeTab === "Competetiors" && <Competitors />}
     </div>
   )
 }

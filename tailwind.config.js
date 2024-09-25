@@ -10,6 +10,7 @@ export default {
         'medium-gray': '#79747E',
         'light-blue': '#3180F5',
         'deep-gray': '#ECECEC',
+        'steel-blue-gray': '#8EA1B3',
         tomato: '#FF3636B0',
       },
     },

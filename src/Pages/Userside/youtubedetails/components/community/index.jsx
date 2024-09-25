@@ -17,7 +17,7 @@ const Community = () => {
               <div className='text-sm'>Jun 2023 - Dec 2023</div>
             </div>
 
-            <div className='grid grid-cols-2 md:grid-cols-3 mt-2 md:m-0 gap-4'>
+            <div className='grid grid-cols-2 md:grid-cols-3 mt-2 md:m-0 gap-2'>
               <GrowthCards />
             </div>
           </div>

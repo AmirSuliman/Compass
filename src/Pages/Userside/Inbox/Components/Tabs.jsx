@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Tabs = () => {
-  const [activeButton, setActiveButton] = useState('/user/inbox');
+  const [activeButton, setActiveButton] = useState('/user/overview/analytics');
   const navigate = useNavigate();
 
   const handleNavigate = (to) => {
@@ -28,10 +28,10 @@ const Tabs = () => {
       </button>
       <button
         onClick={() => {
-          handleNavigate('/user/inbox');
+          handleNavigate('/user/overview/inbox');
         }}
         className={`flex items-center gap-2 px-4 py-2 rounded-lg ${
-          activeButton === '/user/inbox'
+          activeButton === '/user/overview/inbox'
             ? '!bg-Yellow text-black'
             : 'bg-light-gray text-medium-gray'
         }`}
@@ -41,10 +41,10 @@ const Tabs = () => {
       </button>
       <button
         onClick={() => {
-          handleNavigate('/user/planning');
+          handleNavigate('/user/overview/planning');
         }}
         className={`flex items-center gap-2 px-4 py-2 rounded-lg ${
-          activeButton === '/user/planning'
+          activeButton === '/user/overview/planning'
             ? '!bg-Yellow text-black'
             : 'bg-light-gray text-medium-gray'
         }`}
