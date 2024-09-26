@@ -36,12 +36,12 @@ const TopCards = () => {
     <div className='grid gap-4 grid-cols-2 md:grid-cols-4'>
       {cardsData?.map((item) => (
         <div className='p-6 bg-white rounded-md shadow-md grid gap-2'>
-          <div className='text-lg font-semibold'>{item.title}</div>
+          <div className='md:text-lg font-semibold'>{item.title}</div>
           <div className='flex items-center justify-between'>
-            <div className='text-4xl'>{item.value}</div>
+            <div className='text-2xl md:text-4xl'>{item.value}</div>
             {item?.stats && (
               <div
-                className={`flex items-center justify-center gap-1 rounded-lg px-2 py-1 text-white ${
+                className={`flex items-center justify-center gap-1 rounded-lg px-1 py-0.5 text-white ${
                   item?.stats?.icon?.type === ArrowUp
                     ? "bg-green-100"
                     : "bg-red-100"

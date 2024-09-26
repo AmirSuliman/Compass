@@ -12,7 +12,7 @@ const Dashboard = () => {
       <TopCards />
 
       <div className='bg-white p-6 rounded-lg shadow-md'>
-        <div className='flex items-center justify-between'>
+        <div className='flex md:flex-row flex-col md:items-center justify-between gap-4 md:gap-0'>
           <div>
             <div className='text-gray-500'>Statistics</div>
             <div className='font-bold text-xl'>Subscriptions</div>
