@@ -1,5 +1,5 @@
 import { Filter } from 'lucide-react';
-import SearchInput from '../../../../Layout/components/SearchInput';
+import SearchInput from '../../../../Layout/Userside/components/SearchInput';
 import { useState } from 'react';
 import ConnectionsList from './ConnectionsList';
 
