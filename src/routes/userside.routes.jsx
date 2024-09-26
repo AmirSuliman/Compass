@@ -12,6 +12,7 @@ import Planning from '../Pages/Userside/Planning/Planning';
 import AIcontentrecomendation from '../Pages/Userside/AIcontent/recomendation';
 import Targetaudience from '../Pages/Userside/AIcontent/targetaudience';
 import AddCompetitors from '../Pages/Userside/AIcontent/addcompititors';
+import Content from '../Pages/Userside/suggestion/content';
 const Notification = lazy(() =>
   import('../Pages/Userside/setting/notification')
 );
@@ -193,6 +194,14 @@ const usersideRouter = [
     element: (
       <DefaultLayout headerChildren={<SearchInput/>}>
         <Targetaudience />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/suggestion-content',
+    element: (
+      <DefaultLayout>
+        <Content />
       </DefaultLayout>
     ),
   },

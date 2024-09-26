@@ -43,7 +43,7 @@ const Sidebar = () => {
         {showSidebar ? 'x' : <Menu size={40} />}
       </button>
       <aside
-        className={`fixed left-0 top-0 bottom-0 z-[100] flex h-screen w-max flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 ${
+        className={`fixed left-0 top-0 bottom-0 sm:z-0 z-[100] flex h-screen w-max flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 ${
           showSidebar
             ? '-translate-x-0 transition-all ease-in-out duration-500 shadow-lg'
             : '-translate-x-full transition-all ease-in-out duration-500'
