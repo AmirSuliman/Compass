@@ -61,7 +61,7 @@ const Createpost = ({
               onClick={handleCreatePost}
               className='flex-1 bg-blue-500 text-white py-2 px-4 rounded-lg w-24'
             >
-              Create
+              Apply
             </button>
           </div>
          
