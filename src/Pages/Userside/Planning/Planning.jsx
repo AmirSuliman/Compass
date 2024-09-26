@@ -57,7 +57,7 @@ const Planning = () => {
 
         {/* Search Bar */}
         <div className='flex flex-col sm:flex-row gap-4'>
-        <div className='p-3 bg-white rounded-full flex flex-row items-center justify-between'>
+        <div className='p-3 bg-white rounded-full flex flex-row items-center justify-between sm:w-[400px]'>
           <input type='text' placeholder='Search' className='outline-none' />
           <Search />
         </div>
