@@ -126,9 +126,9 @@ const Sidebar = () => {
 
           {/* Menu Item: Setting */}
           <NavLink
-            to="/"
+            to="/user/setting"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/settings')
+              pathname.includes('/user/setting')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}

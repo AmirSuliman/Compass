@@ -1,6 +1,14 @@
 import { Bell, ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ children }) => {
+  const navigate= useNavigate();
+  const handleNavigate = () => {
+    navigate('/user/notification'); 
+  };
+  const handleNavigateprofile = () => {
+    navigate('/user/profile'); 
+  };
   return (
     <header className="flex gap-4 w-full px-8 items-center justify-between py-4">
       <div className="flex flex-col w-full">
@@ -15,11 +23,13 @@ const Header = ({ children }) => {
 
       {/* Notification Icon */}
       <button className="bg-white rounded-full p-3 shadow-md aspect-square grow-0 shrink-0 flex items-center justify-center">
-        <Bell />
+        <Bell onClick={handleNavigate}/>
       </button>
 
       {/* Profile Avatar */}
-      <button className="bg-[#FDC546] w-12 h-12 aspect-square grow-0 shrink-0 flex items-center justify-center rounded-full shadow-md">
+      <button 
+      onClick={handleNavigateprofile}
+      className="bg-[#FDC546] w-12 h-12 aspect-square grow-0 shrink-0 flex items-center justify-center rounded-full shadow-md">
         <img
           src="/Memoji Boys 6-18.png"
           alt="Profile Avatar"

@@ -38,7 +38,7 @@ const Calendar = () => {
   nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
 
   return (
-    <div className="calendar bg-white rounded-xl py-4">
+    <div className="calendar bg-white rounded-xl px-8 py-4 w-full ">
       <div className="months-container">
         <div className="month">
           <div className="flex gap-4 px-4 font-medium text-lg text-[#5E5873]">

@@ -28,7 +28,7 @@ const Otp=()=>{
             </label>
              
              <button className="p-2 px-12  bg-blue-600 rounded-full text-white">
-                Next
+                submit
              </button>
 
             </form>
