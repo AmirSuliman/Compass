@@ -1,7 +1,10 @@
-
+import { useNavigate } from "react-router-dom";
 
 const Verifyemailandphone=()=>{
-
+    const navigate= useNavigate();
+    const handleNavigate = () => {
+      navigate('/user/otp'); 
+    };
     return(
         <div>
         <h1 className="font-semibold text-2xl">Verify email and phone number</h1>
@@ -27,7 +30,9 @@ const Verifyemailandphone=()=>{
                 />
             </label>
              
-             <button className="p-2 px-12  bg-blue-600 rounded-full text-white">
+             <button 
+             onClick={handleNavigate}
+             className="p-2 px-12  bg-blue-600 rounded-full text-white">
                 Next
              </button>
 

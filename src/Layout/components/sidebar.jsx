@@ -43,7 +43,7 @@ const Sidebar = () => {
         {showSidebar ? 'x' : <Menu size={40} />}
       </button>
       <aside
-        className={`fixed left-0 top-0 bottom-0 z-[100] flex h-screen w-max flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 ${
+        className={`fixed left-0 top-0 bottom-0 sm:z-0 z-[100] flex h-screen w-max flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 ${
           showSidebar
             ? '-translate-x-0 transition-all ease-in-out duration-500 shadow-lg'
             : '-translate-x-full transition-all ease-in-out duration-500'
@@ -126,9 +126,9 @@ const Sidebar = () => {
 
           {/* Menu Item: Setting */}
           <NavLink
-            to="/"
+            to="/user/setting"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/settings')
+              pathname.includes('/user/setting')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}

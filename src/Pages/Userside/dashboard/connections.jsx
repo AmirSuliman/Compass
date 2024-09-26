@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Socials from "./components/socials";
-
+import { useNavigate } from 'react-router-dom';
 const Connections = () => {
   // State to track the active tab
   const [activeTab, setActiveTab] = useState('Socials');
@@ -9,13 +9,19 @@ const Connections = () => {
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
+  const navigate= useNavigate();
+  const handleNavigate = () => {
+    navigate('/user/select-platform'); 
+  };
 
   return (
     <>
       <div className="flex flex-col gap-4">
         <h1 className="text-[26px] font-semibold">Connected Socials</h1>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <div className="w-auto sm:w-[400px] p-4 bg-blue-100 font-medium px-4 border border-[#0866FF] rounded-full flex flex-row items-center justify-between text-[#0866FF] cursor-pointer">
+          <div 
+          onClick={handleNavigate}
+          className="w-auto sm:w-[400px] p-4 bg-blue-100 font-medium px-4 border border-[#0866FF] rounded-full flex flex-row items-center justify-between text-[#0866FF] cursor-pointer">
             <div className="flex flex-row gap-2">
               <img src="/image 9.png" alt="fb" />
               <p>Connect to Facebook</p>
