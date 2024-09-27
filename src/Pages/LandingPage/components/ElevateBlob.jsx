@@ -1,13 +1,12 @@
 import React from 'react';
 import phoneImg from '../../../../public/landingpage/phone.png';
-
+import bgImage from "../../../../public/landingpage/bg.jpeg";
 export default function ElevateBlob() {
   return (
     <div
       className="flex flex-col md:flex-row justify-between w-full bg-cover bg-center p-6"
       style={{
-        backgroundColor: '#ff8', // Fallback color
-        backgroundBlendMode: 'multiply', // Blend the color and image
+        backgroundImage: `url(${bgImage})`
       }}
     >
       {/* Column 1 - Heading and Text (Aligned at the Top) */}

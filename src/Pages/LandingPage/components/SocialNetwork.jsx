@@ -1,5 +1,5 @@
 import React from 'react';
-import socialImage from '../../../../public/landingpage/social.png'; // Update the path as needed
+import socialImage from '../../../../public/landingpage/SocialImage.png'; // Update the path as needed
 
 export default function SocialNetwork() {
   return (
