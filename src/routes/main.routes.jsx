@@ -1,6 +1,7 @@
 import App from '../App';
 import { createBrowserRouter } from 'react-router-dom';
 import usersideRoutes from './userside.routes';
+import adminsideRoutes from './adminside.routes';
 
 const mainRoutes = createBrowserRouter([
   {
@@ -10,7 +11,7 @@ const mainRoutes = createBrowserRouter([
       ...usersideRoutes.routes,
       // ...candidateRoutes.routes,
       // ...employeeRouter.routes,
-      // ...adminRouter.routes,
+      ...adminsideRoutes.routes,
       // ...landingPageRouter,
     ],
   },
