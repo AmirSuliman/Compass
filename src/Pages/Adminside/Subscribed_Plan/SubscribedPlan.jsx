@@ -1,6 +1,7 @@
 import React from 'react'
 import SubscribedChart from './components/SubscribedChart'
 import Dropdown from './components/DropDown'
+import SubscriptionTable from './components/SubscriptionTable'
 export default function SubscribedPlan() {
   return (
     <div>
@@ -26,6 +27,7 @@ export default function SubscribedPlan() {
 
         <SubscribedChart />
       </div>
+      <SubscriptionTable/>
     </div>
   )
 }

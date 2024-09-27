@@ -22,10 +22,10 @@ const SubscribedChart = () => {
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />
-        {/* Adjust the Y-axis domain to shift the bars up slightly */}
+        
         <YAxis tickFormatter={(value) => `${value / 1000}k`} domain={[0, 'auto']} padding={{ bottom: 30 }} />
         <Tooltip formatter={(value) => new Intl.NumberFormat().format(value)} />
-        {/* Adding the radius property to round the bars */}
+      
         <Bar dataKey="blue" fill="#4285F4" barSize={30} radius={[20, 20, 20, 20]} />
         <Bar dataKey="yellow" fill="#F4B400" barSize={30} radius={[20, 20, 20, 20]} />
       </BarChart>
