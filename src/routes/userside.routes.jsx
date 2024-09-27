@@ -1,6 +1,6 @@
 import { lazy } from 'react';
-import DefaultLayout from '../Layout/UserLayout';
-import SearchInput from '../Layout/components/SearchInput';
+import DefaultLayout from '../Layout/Userside/UserLayout';
+import SearchInput from '../Layout/Userside/components/SearchInput';
 import Tabs from '../Pages/Userside/Inbox/Components/Tabs';
 import Userdashboard from '../Pages/Userside/dashboard/Userdashboard';
 import Survey from '../Pages/Userside/Suggestionandsurvey/survey';
