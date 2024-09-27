@@ -5,7 +5,7 @@ const Campaigns =()=>{
 
     return(
         <>
-          <div className="flex flex-row gap-8 items-center justify-between w-full">
+          <div className="flex flex-col sm:flex-row gap-8 items-center justify-between w-full">
             <div className="p-4 rounded-lg bg-white w-full shadow-md flex flex-col gap-4">
                <p className='text-[18px] font-medium'>Active users</p>
                <div className="flex flex-row items-center justify-between">
