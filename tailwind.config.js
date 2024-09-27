@@ -13,6 +13,9 @@ export default {
         'steel-blue-gray': '#8EA1B3',
         tomato: '#FF3636B0',
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'], 
+      },
     },
   },
   plugins: [],
