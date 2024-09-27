@@ -11,7 +11,7 @@ const mainRoutes = createBrowserRouter([
     element: <App />,
     children: [
       // ...usersideRoutes.routes,
-      // ...landingPageRoutes.routes,  // Add the landing page routes here
+      ...landingPageRoutes.routes,  // Add the landing page routes here
       // ...candidateRoutes.routes,
       // ...employeeRouter.routes,
       ...adminsideRoutes.routes,
