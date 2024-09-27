@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import DefaultLayout from '../Layout/AdminSide/AdminLayout';
+import DefaultLayout from '../Layout/Adminside/AdminLayout';
 import SearchInput from '../Layout/Userside/components/SearchInput';
 import Campaigns from '../Pages/Adminside/campaigns/campaigns';
 import AIcontent from '../Pages/Adminside/AI content optimaization request/AIcontent';
