@@ -15,7 +15,7 @@ body {
 
 input[type='number'] {
   -moz-appearance: textfield;
-  -webkit-appearance: none;  
+  -webkit-appearance: none;
 }
 
 input[type='number']::-webkit-inner-spin-button,
