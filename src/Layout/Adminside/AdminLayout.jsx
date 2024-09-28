@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
 
-const DefaultLayout = ({ children, headerChildren }) => {
+const AdminLayout = ({ children, headerChildren }) => {
   return (
     <div className="flex flex-row h-screen relative w-full overflow-hidden bg-[#f8f8f8] text-black">
       <Sidebar />
@@ -18,4 +18,4 @@ const DefaultLayout = ({ children, headerChildren }) => {
   );
 };
 
-export default DefaultLayout;
+export default AdminLayout;

@@ -52,9 +52,15 @@ const UserSidescreen = lazy(() =>
 const Suggestion = lazy(() =>
   import('../Pages/Userside/Suggestionandsurvey/suggestion')
 );
+const LandingPage = lazy(() => import('../Pages/LandingPage/LandingPage'));
+
 const usersideRouter = [
   {
     path: '/',
+    element: <LandingPage />,
+  },
+  {
+    path: '/login',
     element: <Login />,
   },
   {
@@ -184,7 +190,7 @@ const usersideRouter = [
   {
     path: '/user/Ai-content-recomendation',
     element: (
-      <DefaultLayout headerChildren={<SearchInput/>}>
+      <DefaultLayout headerChildren={<SearchInput />}>
         <AIcontentrecomendation />
       </DefaultLayout>
     ),
@@ -192,7 +198,7 @@ const usersideRouter = [
   {
     path: '/user/target-audience',
     element: (
-      <DefaultLayout headerChildren={<SearchInput/>}>
+      <DefaultLayout headerChildren={<SearchInput />}>
         <Targetaudience />
       </DefaultLayout>
     ),
@@ -208,7 +214,7 @@ const usersideRouter = [
   {
     path: '/user/add-competitors',
     element: (
-      <DefaultLayout headerChildren={<SearchInput/>}>
+      <DefaultLayout headerChildren={<SearchInput />}>
         <AddCompetitors />
       </DefaultLayout>
     ),
