@@ -21,13 +21,13 @@ const CalendarDays = ({ day, changeCurrentDay }) => {
   }
 
   return (
-    <div className="grid grid-cols-7">
+    <div className="grid grid-cols-7 overflow-x-auto">
       {currentDays.map((day, index) => (
         <div
           className={
             'calendar-day' +
             (day.currentMonth ? ' current' : '') +
-            (day.selected ? ' selected' : '')
+            (day.selected ? 'selected !bg-[#F8F8F8]' : '')
           }
           key={index}
           onClick={() => changeCurrentDay(day)}

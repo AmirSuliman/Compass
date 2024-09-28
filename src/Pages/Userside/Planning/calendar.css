@@ -18,14 +18,10 @@
 
 
 .calendar-day {
-  width: 125px;
+  width: 130px;
   height: 75px;
   position: relative;
   border: 1px solid #a6a6a6;
-}
-
-.calendar-day:hover {
-  background-color: #515151;
 }
 
 .calendar-day p {
@@ -35,10 +31,11 @@
 }
 
 .current p {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .selected p {
   color: #cc0000;
   font-weight: bold;
+  /* background: #F8F8F8; */
 }

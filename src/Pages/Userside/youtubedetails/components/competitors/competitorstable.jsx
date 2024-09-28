@@ -56,7 +56,7 @@ const CompetitorsTable = () => {
   ]
 
   return (
-    <table className='w-full min-w-max border-collapse text-sm md:text-base'>
+    <table className='w-full min-w-max border-collapse text-sm md:text-base '>
       <thead>
         <tr className='text-left text-xs md:text-base table-row'>
           <th className='py-2'>Favourite</th>
