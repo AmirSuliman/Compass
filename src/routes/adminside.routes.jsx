@@ -10,16 +10,12 @@ const Suggestions = lazy(() =>
 
 import Campaigns from '../Pages/Adminside/campaigns/campaigns';
 import AIcontent from '../Pages/Adminside/AI content optimaization request/AIcontent';
-
-const Revenue = lazy(() => import('../Pages/Adminside/Revenue/revenue'));
-const Dashboard = lazy(() => import('../Pages/Adminside/dashboard'));
 const AIcontentOptimization = lazy(() =>
   import(
     '../Pages/Adminside/AI content optimaization request/aicontentoptimizationrequest'
   )
 );
 const SubscibedPlan = lazy(()=>import('../Pages/Adminside/Subscribed_Plan/SubscribedPlan'));
-const Allusers = lazy(() => import('../Pages/Adminside/allusers'));
 const adminsideRouter = [
   {
     path: '/admin-dashboard',

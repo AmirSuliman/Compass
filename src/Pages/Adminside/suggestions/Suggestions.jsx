@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Home from "./home"
+import Surveys from "./surveys/Surveys"
 
 const Suggestions = () => {
   const [activeTab, setActiveTab] = useState("Suggestions")
@@ -41,7 +42,7 @@ const Suggestions = () => {
 
       {activeTab === "Suggestions" && <Home />}
 
-      {activeTab === "Surveys" && '<PublishedVideos />'}
+      {activeTab === "Surveys" && <Surveys/>}
 
       {activeTab === "Feedback" && '<ViewedVideos />'}
 
