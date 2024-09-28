@@ -79,16 +79,16 @@ const Chart = () => {
         <div
           style={{
             position: 'absolute',
-            top: hoveredBar.y - 90, // Adjusted to appear right above the bar
-            left: hoveredBar.x - 300, // Adjust to center horizontally above the bar
-            backgroundColor: 'rgba(255, 255, 255, 0.9)', // White background with slight transparency
+            top: hoveredBar.y - 90, 
+            left: hoveredBar.x - 300, 
+            backgroundColor: 'rgba(255, 255, 255, 0.9)', 
             border: '1px solid #ccc',
             padding: '10px',
             borderRadius: '5px',
             boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-            pointerEvents: 'none', // To avoid interfering with other elements
-            zIndex: 999, // Ensures it stays on top of other elements
-            transform: 'translateY(-100%)' // Ensures the tooltip stays just above the bar
+            pointerEvents: 'none',
+            zIndex: 999,
+            transform: 'translateY(-100%)' 
           }}
         >
           <p style={{ margin: 0, fontWeight: 'bold', color: 'black' }}>{hoveredBar.name}</p>
