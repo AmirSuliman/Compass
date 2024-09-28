@@ -222,7 +222,7 @@ const usersideRouter = [
   {
     path: '/user-dashboard',
     element: (
-      <DefaultLayout headerChildren={<SearchInput />}>
+      <DefaultLayout >
         <Userdashboard />
       </DefaultLayout>
     ),

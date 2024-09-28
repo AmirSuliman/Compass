@@ -54,7 +54,6 @@ const Sidebar = () => {
         </NavLink>
 
         <nav className="px-4 no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
-          <h1 className="text-sm text-black font-medium ml-8">ANALYTICAL</h1>
 
           {/* Menu Item: Performance */}
           <NavLink
@@ -99,6 +98,32 @@ const Sidebar = () => {
           {/* Menu Item: Brand Setting */}
 
           <NavLink
+            to="/user/Ai-content-recomendation"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/user/Ai-content-recomendation')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <SaveAll size={22} />
+            <span>Campaigns</span>
+          </NavLink>
+
+           {/* Menu Item: Setting */}
+           <NavLink
+            to="/user/setting"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/user/setting')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <Settings size={22} />
+            <span>Setting</span>
+          </NavLink>
+
+
+          <NavLink
             to="/"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
               pathname.includes('/brand-setting')
@@ -124,19 +149,7 @@ const Sidebar = () => {
             <span>Support</span>
           </NavLink>
 
-          {/* Menu Item: Setting */}
-          <NavLink
-            to="/user/setting"
-            className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/user/setting')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
-            }`}
-          >
-            <Settings size={22} />
-            <span>Setting</span>
-          </NavLink>
-
+         
           {/* Menu Item: Calendar */}
 
           <NavLink

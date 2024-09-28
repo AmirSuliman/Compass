@@ -2,8 +2,8 @@ import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'bluePart', value: 45 }, 
-  { name: 'Remaining', value: 25 }, 
+  { name: 'bluePart', value: 95 }, 
+  { name: 'Remaining', value: 15 }, 
 ];
 
 const COLORS = ['#5680CA', '#d3d3d3'];
