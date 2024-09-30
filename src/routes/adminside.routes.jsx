@@ -10,12 +10,12 @@ const Suggestions = lazy(() =>
 
 import Campaigns from '../Pages/Adminside/campaigns/campaigns';
 import AIcontent from '../Pages/Adminside/AI content optimaization request/AIcontent';
-
 const AIcontentOptimization = lazy(() =>
   import(
     '../Pages/Adminside/AI content optimaization request/aicontentoptimizationrequest'
   )
 );
+const SubscibedPlan = lazy(()=>import('../Pages/Adminside/Subscribed_Plan/SubscribedPlan'));
 const adminsideRouter = [
   {
     path: '/admin-dashboard',
@@ -71,6 +71,15 @@ const adminsideRouter = [
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <AIcontentOptimization />
+      </DefaultLayout>
+    ),
+  },
+
+  {
+    path: "/admin/subscribedplan",
+    element: (
+      <DefaultLayout headerChildren={<SearchInput/>}>
+        <SubscibedPlan />
       </DefaultLayout>
     ),
   },
