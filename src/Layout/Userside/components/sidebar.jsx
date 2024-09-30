@@ -55,7 +55,7 @@ const Sidebar = () => {
 
         <nav className="px-4 no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
 
-          {/* Menu Item: Performance */}
+          {/* Menu Item: Performance 
           <NavLink
             to="/"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
@@ -66,7 +66,7 @@ const Sidebar = () => {
           >
             <Gauge size={22} />
             <span>Performance</span>
-          </NavLink>
+          </NavLink> */}
 
           {/* Menu Item: Dashboard */}
           <NavLink
