@@ -33,8 +33,8 @@ const DescribeQuestion = () => {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6 mt-12">
             {/* Radio Button 1 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors cursor-pointer ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -44,12 +44,12 @@ const DescribeQuestion = () => {
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
                 required
               />
-              <label className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>Content Creator, Personal Brands or Influencer</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>Content Creator, Personal Brands or Influencer</span>
+            </label>
 
             {/* Radio Button 2 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -58,12 +58,12 @@ const DescribeQuestion = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B']`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>Freelancer work for clients</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>Freelancer work for clients</span>
+            </label>
 
             {/* Radio Button 3 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option3' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option3' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -72,8 +72,8 @@ const DescribeQuestion = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option3' ? 'text-[#D6A73B]' : ''}`}>Marketing Agency</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option3' ? 'text-[#D6A73B]' : ''}`}>Marketing Agency</span>
+            </label>
 
             <button
               type="submit"

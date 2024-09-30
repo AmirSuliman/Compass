@@ -41,7 +41,6 @@ const Overview = () => {
 
       <Cards />
       <div className="flex flex-col sm:flex-row gap-2 items-start justify-between mt-4">
-        <Contenttable />
         <Detailtable />
       </div>
 

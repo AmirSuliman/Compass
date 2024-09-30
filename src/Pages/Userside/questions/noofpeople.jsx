@@ -32,8 +32,8 @@ const NoofpeopleQuestion = () => {
           
           <form onSubmit={handleSubmit} className="space-y-6 mt-12">
             {/* Radio Button 1 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label
+              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors cursor-pointer ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -43,12 +43,12 @@ const NoofpeopleQuestion = () => {
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
                 required
               />
-              <label className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>Just me</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>Just me</span>
+            </label>
 
             {/* Radio Button 2 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -57,8 +57,8 @@ const NoofpeopleQuestion = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B']`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>Work with more collegues</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>Work with more collegues</span>
+            </label>
 
            
             <div className="flex flex-row gap-3 mt-4">

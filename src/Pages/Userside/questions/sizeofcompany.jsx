@@ -31,8 +31,8 @@ const Sizeofcompany = () => {
           <h1 className="text-[25px] font-bold text-gray-800">What is the size of your company?</h1>
           
           <form onSubmit={handleSubmit} className="space-y-6 mt-12">
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors cursor-pointer ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -42,12 +42,12 @@ const Sizeofcompany = () => {
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
                 required
               />
-              <label className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>Only me</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>Only me</span>
+            </label>
 
             {/* Radio Button 2 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -56,12 +56,12 @@ const Sizeofcompany = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B']`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>Between 1 and 10</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>Between 1 and 10</span>
+            </label>
 
             {/* Radio Button 3 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option3' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option3' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -70,12 +70,12 @@ const Sizeofcompany = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option3' ? 'text-[#D6A73B]' : ''}`}>Between 11 and 50</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option3' ? 'text-[#D6A73B]' : ''}`}>Between 11 and 50</span>
+            </label>
 
             {/* Radio Button 4 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option4' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option4' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -84,12 +84,12 @@ const Sizeofcompany = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option4' ? 'text-[#D6A73B]' : ''}`}>Between 51 and 150</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option4' ? 'text-[#D6A73B]' : ''}`}>Between 51 and 150</span>
+            </label>
 
             {/* Radio Button 5 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option5' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option5' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -98,11 +98,11 @@ const Sizeofcompany = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option5' ? 'text-[#D6A73B]' : ''}`}>Between 151 and 500</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option5' ? 'text-[#D6A73B]' : ''}`}>Between 151 and 500</span>
+            </label>
 
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option6' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option6' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -111,8 +111,8 @@ const Sizeofcompany = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option6' ? 'text-[#D6A73B]' : ''}`}>More than 500</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option6' ? 'text-[#D6A73B]' : ''}`}>More than 500</span>
+            </label>
 
             <div className="flex flex-row gap-3 mt-4">
               <button

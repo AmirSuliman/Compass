@@ -33,8 +33,8 @@ const BusinessQuestion = () => {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6 mt-12">
             {/* Radio Button 1 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 rounded-full border transition-colors ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option1' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -44,26 +44,26 @@ const BusinessQuestion = () => {
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
                 required
               />
-              <label className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>E-Commerce</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option1' ? 'text-[#D6A73B]' : ''}`}>E-Commerce</span>
+            </label>
 
             {/* Radio Button 2 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option2' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
                 value="option2"
                 name="radio-group"
                 onChange={handleChange}
-                className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B']`} 
+                className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>SaaS</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option2' ? 'text-[#D6A73B]' : ''}`}>SaaS</span>
+            </label>
 
             {/* Radio Button 3 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option3' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option3' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -72,12 +72,12 @@ const BusinessQuestion = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option3' ? 'text-[#D6A73B]' : ''}`}>Media</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option3' ? 'text-[#D6A73B]' : ''}`}>Media</span>
+            </label>
 
             {/* Radio Button 4 */}
-            <div 
-              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option4' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option4' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
               <input
                 type="radio"
@@ -86,26 +86,25 @@ const BusinessQuestion = () => {
                 onChange={handleChange}
                 className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
               />
-              <label className={`text-gray-700 ${selectedOption === 'option4' ? 'text-[#D6A73B]' : ''}`}>Marketing</label>
-            </div>
+              <span className={`text-gray-700 ${selectedOption === 'option4' ? 'text-[#D6A73B]' : ''}`}>Marketing</span>
+            </label>
 
             {/* Radio Button 5 */}
-            <div 
-              className={`flex flex-row items-center justify-between space-x-4 p-4 border rounded-full transition-colors ${selectedOption === 'option5' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
+            <label 
+              className={`flex flex-row items-center justify-between space-x-4 p-4 border rounded-full transition-colors cursor-pointer ${selectedOption === 'option5' ? 'bg-yellow-50 border-[#D6A73B]' : 'bg-white border-gray-300'}`}
             >
-                <div className="flex flex-row gap-3">
+              <div className="flex flex-row gap-3">
                 <input
-                type="radio"
-                value="option5"
-                name="radio-group"
-                onChange={handleChange}
-                className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
-              />
-              <label className={`text-gray-700 ${selectedOption === 'option5' ? 'text-[#D6A73B]' : ''}`}>Other</label>
-                </div>
-             
-              <ChevronDown/>
-            </div>
+                  type="radio"
+                  value="option5"
+                  name="radio-group"
+                  onChange={handleChange}
+                  className={`h-6 w-6 rounded-full border text-[#D6A73B] border-gray-300 peer appearance-none checked:bg-[#D6A73B] checked:border-transparent focus:ring-[#D6A73B]`} 
+                />
+                <span className={`text-gray-700 ${selectedOption === 'option5' ? 'text-[#D6A73B]' : ''}`}>Other</span>
+              </div>
+              <ChevronDown />
+            </label>
 
             <div className="flex flex-row gap-3 mt-4">
               <button

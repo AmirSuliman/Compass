@@ -118,7 +118,7 @@ const usersideRouter = [
   {
     path: '/user/overview',
     element: (
-      <DefaultLayout headerChildren={<SearchInput />}>
+      <DefaultLayout >
         <Overview />
       </DefaultLayout>
     ),
@@ -222,7 +222,7 @@ const usersideRouter = [
   {
     path: '/user-dashboard',
     element: (
-      <DefaultLayout headerChildren={<SearchInput />}>
+      <DefaultLayout >
         <Userdashboard />
       </DefaultLayout>
     ),
