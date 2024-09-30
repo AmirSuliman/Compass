@@ -6,7 +6,7 @@ export default function SocialNetwork() {
     <div className="flex flex-col sm:flex-row items-center justify-between w-full h-full bg-white p-6 md:px-32 px-4 mt-10 -mb-24">
       {/* Left Column */}
       <div className="sm:w-2/5 w-full flex flex-col -mt-32">
-        <h2 className="text-5xl font-bold text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">
           Connect all the social networks you love
         </h2>
         <p className="text-gray-600 mt-6">
