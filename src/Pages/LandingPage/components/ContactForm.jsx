@@ -20,7 +20,7 @@ export default function ContactForm() {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-center">
-        <div className='flex flex-row items-center p-4 border w-[40%] bg-white rounded-lg'>
+        <div className='flex flex-row items-center p-4 border sm:w-[40%] bg-white rounded-lg'>
             <Mail className='text-gray-400 mr-3' /> 
             <input 
               type='text' 

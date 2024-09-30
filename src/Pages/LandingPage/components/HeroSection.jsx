@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="flex flex-col md:flex-row items-start justify-center w-full h-full bg-white mt-8 overflow-x-hidden">
       {/* Left Column */}
       <div className="w-full sm:w-2/3 flex flex-col justify-start px-6 md:px-16 flex-grow sm:ml-24">
-        <h1 className="text-4xl md:text-[50px] font-bold text-gray-800 mb-6 mt-20">
+        <h1 className="text-4xl md:text-[50px] font-bold text-gray-800 mb-6 sm:mt-20">
           Take Control of Your Social Media
         </h1>
         <p className="text-gray-600 mb-12 text-[23px] mt-8">
