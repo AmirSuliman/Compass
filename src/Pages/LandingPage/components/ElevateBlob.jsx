@@ -4,7 +4,7 @@ import bgImage from "../../../../public/landingpage/bg.jpeg";
 export default function ElevateBlob() {
   return (
     <div
-      className="flex flex-col md:flex-row justify-between w-full bg-cover bg-center p-6"
+      className="flex flex-col md:flex-row justify-between w-full bg-cover bg-center p-8"
       style={{
         backgroundImage: `url(${bgImage})`
       }}

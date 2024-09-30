@@ -8,6 +8,7 @@ import HowItWorks from './components/HowItWorks'
 import EngageMinds from './components/EngageMinds'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import Testimonals from './components/testimonals'
 
 export default function LandingPage() {
   return (
@@ -18,10 +19,9 @@ export default function LandingPage() {
      <ElevateBlob/>
      <Features/>
      <HowItWorks/>
-     <div className='hidden md:block lg:block'>
-  <EngageMinds />
-</div>
-<ContactForm/>
+      <EngageMinds />
+     <Testimonals/>
+     <ContactForm/>
      <Footer/>
     </div>
   )
