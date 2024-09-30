@@ -118,7 +118,7 @@ const usersideRouter = [
   {
     path: '/user/overview',
     element: (
-      <DefaultLayout headerChildren={<SearchInput />}>
+      <DefaultLayout >
         <Overview />
       </DefaultLayout>
     ),

@@ -170,15 +170,15 @@ const Userdashboard = () => {
 
             <div className="flex flex-row items-center justify-between w-full p-4 mt-8">
               <div className="flex flex-row gap-1 text-[12px] items-center">
-                <div className="rounded-full w-3 h-3 bg-[#00AF50]" />
+                <div className="rounded-full w-2.5 h-2.5 bg-[#00AF50]" />
                 <p>Social media</p>
               </div>
               <div className="flex flex-row gap-1 text-[10px] items-center">
-                <div className="rounded-full w-3 h-3 bg-[#FE971B]" />
+                <div className="rounded-full w-2.5 h-2.5 bg-[#FE971B]" />
                 <p>Website</p>
               </div>
               <div className="flex flex-row gap-1 text-[12px] items-center">
-                <div className="rounded-full w-3 h-3 bg-[#3180F5]" />
+                <div className="rounded-full w-2.5 h-2.5 bg-[#3180F5]" />
                 <p>Email</p>
               </div>
             </div>

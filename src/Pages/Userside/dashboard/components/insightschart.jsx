@@ -79,7 +79,7 @@ const Chart = () => {
         <div
           style={{
             position: 'absolute',
-            top: hoveredBar.y - 90, 
+            top: hoveredBar.y - 200, 
             left: hoveredBar.x - 300, 
             backgroundColor: 'rgba(255, 255, 255, 0.9)', 
             border: '1px solid #ccc',
