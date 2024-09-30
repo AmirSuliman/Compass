@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import DefaultLayout from '../Layout/AdminSide/AdminLayout';
+import DefaultLayout from '../Layout/Adminside/AdminLayout';
 import SearchInput from '../Layout/Userside/components/SearchInput';
 const Revenue = lazy(() => import('../Pages/Adminside/Revenue/revenue'));
 const Dashboard = lazy(() => import('../Pages/Adminside/dashboard'));
@@ -15,7 +15,9 @@ const AIcontentOptimization = lazy(() =>
     '../Pages/Adminside/AI content optimaization request/aicontentoptimizationrequest'
   )
 );
-const SubscibedPlan = lazy(()=>import('../Pages/Adminside/Subscribed_Plan/SubscribedPlan'));
+const SubscibedPlan = lazy(() =>
+  import('../Pages/Adminside/Subscribed_Plan/SubscribedPlan')
+);
 const adminsideRouter = [
   {
     path: '/admin-dashboard',
@@ -76,9 +78,9 @@ const adminsideRouter = [
   },
 
   {
-    path: "/admin/subscribedplan",
+    path: '/admin/subscribedplan',
     element: (
-      <DefaultLayout headerChildren={<SearchInput/>}>
+      <DefaultLayout headerChildren={<SearchInput />}>
         <SubscibedPlan />
       </DefaultLayout>
     ),
