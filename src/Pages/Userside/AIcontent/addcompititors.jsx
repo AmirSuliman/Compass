@@ -31,18 +31,18 @@ const AddCompetitors=()=>{
             
             <label className="flex flex-col w-full p-2">
                 <span className="mb-2 font-semibold">Name of competitor</span>
-                <input type="text " placeholder="Enter name" className="w-full p-4 border rounded-lg bg-transparent"/>
+                <input type="text " placeholder="Enter Link" className="w-full p-4 border rounded-lg bg-transparent"/>
             </label>
            
            <div className="text-right p-4  gap-4">
-            <button className="border border-blue-600 w-32 p-2 rounded-lg mr-4 text-gray-500">Clear</button>
-            <button className="border border-blue-600 w-32 p-2 rounded-lg bg-blue-600 text-white">Add</button>
+            <button className="border border-[#FDC546] w-32 p-2 rounded-lg mr-4 text-gray-500">Clear</button>
+        <button className="border border-[#FDC546] w-32 p-2 rounded-lg bg-[#FDC546] text-black">Add</button>
            </div>
         </form>
 
         <div className=" border border-gray-200 mt-6 rounded-lg">
             <div className="flex flex-row items-center justify-between p-4 px-8">
-                <h1 className="text-[18px] font-semibold text-[#171717]">Competitor</h1>
+                <h1 className="text-[18px] font-semibold text-[#171717]">Last Competitors used</h1>
                 <p className="mr-8">Add</p>
             </div>
 

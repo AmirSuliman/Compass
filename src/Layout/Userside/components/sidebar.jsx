@@ -98,9 +98,9 @@ const Sidebar = () => {
           {/* Menu Item: Brand Setting */}
 
           <NavLink
-            to="/user/Ai-content-recomendation"
+            to="/user/ai/campaigns"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/user/Ai-content-recomendation')
+              pathname.includes('/user/ai')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}
