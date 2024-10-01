@@ -8,7 +8,7 @@ import HowItWorks from './components/HowItWorks';
 import EngageMinds from './components/EngageMinds';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import Testimonals from './components/Testimonals';
+import Testimonals from './components/Testimonals.jsx';
 
 export default function LandingPage() {
   return (
