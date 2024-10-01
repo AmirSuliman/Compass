@@ -30,7 +30,7 @@ const AddCompetitors=()=>{
             </label>
             
             <label className="flex flex-col w-full p-2">
-                <span className="mb-2 font-semibold">Name of competitor</span>
+                <span className="mb-2 font-semibold">Link to Profile</span>
                 <input type="text " placeholder="Enter Link" className="w-full p-4 border rounded-lg bg-transparent"/>
             </label>
            
