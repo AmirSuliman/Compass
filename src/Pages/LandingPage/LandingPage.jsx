@@ -12,7 +12,7 @@ import Testimonals from './components/Testimonals';
 
 export default function LandingPage() {
   return (
-    <div className='bg-white overflow-x-hidden'> 
+    <div className="bg-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <SocialNetwork />
