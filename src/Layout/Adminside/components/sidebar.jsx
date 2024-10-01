@@ -54,10 +54,10 @@ const Sidebar = () => {
         </NavLink>
 
         <nav className="px-4 no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
-          <h1 className="text-sm text-black font-medium ml-8">ANALYTICAL</h1>
+          {/* <h1 className="text-sm text-black font-medium ml-8">ANALYTICAL</h1> */}
 
           {/* Menu Item: Performance */}
-          <NavLink
+          {/* <NavLink
             to="/"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
               pathname.includes('/dashboard')
@@ -67,7 +67,7 @@ const Sidebar = () => {
           >
             <Gauge size={22} />
             <span>Performance</span>
-          </NavLink>
+          </NavLink> */}
 
           {/* Menu Item: Dashboard */}
           <NavLink
@@ -85,43 +85,76 @@ const Sidebar = () => {
           {/* Menu Item: Connections */}
 
           <NavLink
-            to="/admin/overview"
+            to="/admin/all-users"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/overview')
+              pathname.includes('/admin/all-users')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}
           >
             <CalendarClock size={22} />
-            <span>Connections</span>
+            <span>User Management</span>
           </NavLink>
 
-          {/* Menu Item: Brand Setting */}
+          {/* Menu Item: Revenue */}
 
           <NavLink
-            to="/"
+            to="/admin/revenue"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/brand-setting')
+              pathname.includes('/admin/revenue')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}
           >
             <SaveAll size={22} />
-            <span>Brand setting</span>
+            <span>Revenue</span>
           </NavLink>
 
           {/* Menu Item: Support */}
 
           <NavLink
-            to="/"
+            to="/admin/campaigns"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/support')
+              pathname.includes('/admin/campaigns')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}
           >
             <CircleHelp size={22} />
-            <span>Support</span>
+            <span>Campaigns</span>
+          </NavLink>
+          <NavLink
+            to="/admin/ai-content-optimization"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/admin/ai-content-optimization')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <CircleHelp size={22} />
+            <span>Optimizations</span>
+          </NavLink>
+          <NavLink
+            to="/admin/subscribedplan"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/admin/subscribedplan')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <CircleHelp size={22} />
+            <span>Subscriptions</span>
+          </NavLink>
+          <NavLink
+            to="/admin/suggestions"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/admin/suggestions')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <CircleHelp size={22} />
+            <span>Suggestions</span>
           </NavLink>
 
           {/* Menu Item: Setting */}
