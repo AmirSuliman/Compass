@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Testimonals = () => {
+const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const testimonialsData = [
@@ -91,5 +91,4 @@ const Testimonals = () => {
     </div>
   );
 };
-
-export default Testimonals;
+export default Testimonials;

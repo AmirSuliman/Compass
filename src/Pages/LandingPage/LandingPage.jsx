@@ -8,7 +8,7 @@ import HowItWorks from './components/HowItWorks';
 import EngageMinds from './components/EngageMinds';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import Testimonals from './components/Testimonals.jsx';
+import Testimonials from './components/Testimonials';
 
 export default function LandingPage() {
   return (
@@ -20,7 +20,7 @@ export default function LandingPage() {
       <Features />
       <HowItWorks />
       <EngageMinds />
-      <Testimonals />
+      <Testimonials />
       <ContactForm />
       <Footer />
     </main>
