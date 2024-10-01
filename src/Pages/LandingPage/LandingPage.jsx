@@ -20,6 +20,7 @@ export default function LandingPage() {
       <Features />
       <HowItWorks />
       <EngageMinds />
+      {/* <Testimonals /> */}
       <Testimonals />
       <ContactForm />
       <Footer />
