@@ -4,7 +4,7 @@ import Sidebar from './components/sidebar';
 
 const DefaultLayout = ({ children, headerChildren }) => {
   return (
-    <div className="flex flex-row h-screen relative w-full overflow-hidden bg-[#f8f8f8] text-black">
+    <div className="flex flex-row h-screen relative w-full overflow-hidden bg-[#f8f8f8] text-black max-w-[1750px] mx-auto">
       <Sidebar />
 
       {/* Main Content Area */}

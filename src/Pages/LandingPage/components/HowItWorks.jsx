@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { User, Share2, CalendarClock, Repeat2 } from 'lucide-react'; // Example icons from Lucide
 import howImg1 from '../../../../public/landingpage/howitworks1.png';
 import howImg2 from '../../../../public/landingpage/howitworks2.png';
@@ -7,7 +7,9 @@ const HowItWorks = () => {
   return (
     <div className="container mx-auto p-5 sm:p-16">
       {/* Heading */}
-      <h2 className="text-left text-5xl font-bold mb-8">How It Works</h2>
+      <h2 className="text-3xl lg:text-5xl font-semibold text-center mb-8">
+        How It Works
+      </h2>
 
       {/* Main Flex Container */}
       <div className="flex flex-col md:flex-row gap-8">
@@ -18,9 +20,14 @@ const HowItWorks = () => {
               <div className="p-2 bg-white rounded-md mr-2">
                 <User className="text-black" />
               </div>
-              <h3 className="font-bold text-xl ml-4">Create your free account</h3>
+              <h3 className="font-bold text-xl ml-4">
+                Create your free account
+              </h3>
             </div>
-            <p className="flex-1 mt-3 text-[#343434]">Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido el texto de Lorem Ipsum ha</p>
+            <p className="flex-1 mt-3 text-[#343434]">
+              Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido
+              el texto de Lorem Ipsum ha
+            </p>
           </div>
 
           <div className="p-4 bg-white shadow-md rounded-lg h-[250px] flex flex-col justify-between">
@@ -30,7 +37,10 @@ const HowItWorks = () => {
               </div>
               <h3 className="font-bold text-xl ml-4">Connect your channels</h3>
             </div>
-            <p className="flex-1 mt-3 text-[#343434]">Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido el texto de Lorem Ipsum ha</p>
+            <p className="flex-1 mt-3 text-[#343434]">
+              Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido
+              el texto de Lorem Ipsum ha
+            </p>
           </div>
 
           <div className="p-4 bg-white shadow-md rounded-lg h-[250px] flex flex-col justify-between">
@@ -40,7 +50,10 @@ const HowItWorks = () => {
               </div>
               <h3 className="font-bold text-xl ml-4">Schedule your posts</h3>
             </div>
-            <p className="flex-1 mt-3 text-[#343434]">Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido el texto de Lorem Ipsum ha</p>
+            <p className="flex-1 mt-3 text-[#343434]">
+              Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido
+              el texto de Lorem Ipsum ha
+            </p>
           </div>
 
           <div className="p-4 bg-white shadow-md rounded-lg h-[250px] flex flex-col justify-between">
@@ -48,13 +61,21 @@ const HowItWorks = () => {
               <div className="p-2 bg-[#B2E7B9] rounded-md mr-2">
                 <Repeat2 className="text-black" />
               </div>
-              <h3 className="font-bold text-xl ml-4">Publish & get your planning on point</h3>
+              <h3 className="font-bold text-xl ml-4">
+                Publish & get your planning on point
+              </h3>
             </div>
-            <p className="flex-1 mt-3 text-[#343434]">Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido el texto de Lorem Ipsum ha</p>
+            <p className="flex-1 mt-3 text-[#343434]">
+              Lorem Ipsum ha sido el texto de Lorem Ipsum ha Lorem Ipsum ha sido
+              el texto de Lorem Ipsum ha
+            </p>
           </div>
-          <div> <button className="px-12 py-3 text-white bg-[#52CC8A] rounded-2xl shadow-md self-start">
-    Get Started
-</button></div>
+          <div>
+            {' '}
+            <button className="px-12 py-3 text-white bg-[#52CC8A] rounded-full shadow-md self-start">
+              Get Started
+            </button>
+          </div>
         </div>
 
         {/* Right Column - Images */}

@@ -8,37 +8,37 @@ const Testimonals = () => {
 
   const testimonialsData = [
     {
-      name: "John Doe",
-      position: "Customer Contact Specialist",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est vero corrupti temporibus vel, delectus eveniet commodi quo.",
+      name: 'John Doe',
+      position: 'Customer Contact Specialist',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est vero corrupti temporibus vel, delectus eveniet commodi quo.',
     },
     {
-      name: "Jane Smith",
-      position: "Marketing Specialist",
-      text: "Reprehenderit temporibus eveniet commodi quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      name: 'Jane Smith',
+      position: 'Marketing Specialist',
+      text: 'Reprehenderit temporibus eveniet commodi quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     },
     {
-      name: "Michael Lee",
-      position: "Sales Manager",
-      text: "Harum est vero corrupti temporibus vel. Lorem ipsum dolor sit amet, consectetur.",
+      name: 'Michael Lee',
+      position: 'Sales Manager',
+      text: 'Harum est vero corrupti temporibus vel. Lorem ipsum dolor sit amet, consectetur.',
     },
     {
-      name: "Emily Davis",
-      position: "HR Specialist",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est vero corrupti temporibus vel.",
+      name: 'Emily Davis',
+      position: 'HR Specialist',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum est vero corrupti temporibus vel.',
     },
   ];
 
   const settings = {
     dots: true,
-    infinite: true, 
+    infinite: true,
     speed: 500,
-    slidesToShow: 3, 
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    centerMode: true, 
-    centerPadding: '0', 
+    centerMode: true,
+    centerPadding: '0',
     beforeChange: (current, next) => setActiveIndex(next),
     responsive: [
       {
@@ -64,7 +64,7 @@ const Testimonals = () => {
 
   return (
     <div className="items-center justify-center text-center mt-16">
-      <h1 className="text-5xl font-medium mb-10">Testimonials</h1>
+      <h1 className="text-3xl lg:text-5xl font-semibold mb-10">Testimonials</h1>
       <Slider {...settings} className="flex flex-col gap-4">
         {testimonialsData.map((testimonial, index) => (
           <div
@@ -80,7 +80,9 @@ const Testimonals = () => {
               <div className="p-5 rounded-full bg-gray-300 w-16 h-16">img</div>
               <div className="flex flex-col">
                 <h1>{testimonial.name}</h1>
-                <p className="text-[12px] text-gray-400">{testimonial.position}</p>
+                <p className="text-[12px] text-gray-400">
+                  {testimonial.position}
+                </p>
               </div>
             </div>
           </div>

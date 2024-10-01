@@ -12,7 +12,7 @@ import Testimonals from './components/Testimonals.jsx';
 
 export default function LandingPage() {
   return (
-    <div className="bg-white overflow-x-hidden">
+    <main className="bg-white overflow-x-hidden max-w-[1750px] mx-auto">
       <Navbar />
       <HeroSection />
       <SocialNetwork />
@@ -20,10 +20,9 @@ export default function LandingPage() {
       <Features />
       <HowItWorks />
       <EngageMinds />
-      {/* <Testimonals /> */}
       <Testimonals />
       <ContactForm />
       <Footer />
-    </div>
+    </main>
   );
 }
