@@ -5,9 +5,9 @@ import howImg2 from '../../../../public/landingpage/howitworks2.png';
 
 const HowItWorks = () => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-5 sm:p-16">
       {/* Heading */}
-      <h2 className="text-left text-3xl font-bold mb-8">How It Works</h2>
+      <h2 className="text-left text-5xl font-bold mb-8">How It Works</h2>
 
       {/* Main Flex Container */}
       <div className="flex flex-col md:flex-row gap-8">
