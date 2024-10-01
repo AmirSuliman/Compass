@@ -1,6 +1,4 @@
 import React from 'react';
-import img from '../../../../public/landingpage/tilt_bg.png'; // Replace with your actual image path
-import bgImage from '../../../../public/landingpage/stackedimage.png'; // Replace with the actual image you want to display below
 
 export default function EngageMinds() {
   return (

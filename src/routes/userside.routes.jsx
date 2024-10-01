@@ -53,7 +53,11 @@ const Suggestion = lazy(() =>
   import('../Pages/Userside/Suggestionandsurvey/suggestion')
 );
 const LandingPage = lazy(() => import('../Pages/LandingPage/LandingPage'));
-
+import Campaigns from '../Pages/Userside/AIcontent/campaigns';
+import Viewrecommendation from '../Pages/Userside/AIcontent/viewrecomendations';
+import Historyofgoalsandkpis from '../Pages/Userside/AIcontent/historyofgoals';
+import HistoryofAirecommendation from '../Pages/Userside/AIcontent/historyofairecomendation';
+import History from '../Pages/Userside/AIcontent/history';
 const usersideRouter = [
   {
     path: '/',
@@ -188,7 +192,7 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/Ai-content-recomendation',
+    path: '/user/ai/Ai-content-recomendation',
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <AIcontentrecomendation />
@@ -196,7 +200,7 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/target-audience',
+    path: '/user/ai/target-audience',
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <Targetaudience />
@@ -212,10 +216,50 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/add-competitors',
+    path: '/user/ai/add-competitors',
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <AddCompetitors />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/ai/campaigns',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Campaigns/>
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/ai/view-recomendation',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Viewrecommendation/>
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/ai/history-goals',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <Historyofgoalsandkpis/>
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/ai/history-ai-recommendation',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <HistoryofAirecommendation/>
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/ai/history',
+    element: (
+      <DefaultLayout headerChildren={<SearchInput />}>
+        <History/>
       </DefaultLayout>
     ),
   },

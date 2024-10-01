@@ -5,7 +5,7 @@ const Nav = () => {
     <>
       <div className="flex flex-row gap-8 text-[#79747E] font-medium mt-6">
         <NavLink
-          to="/user/Ai-content-recomendation"
+          to="/user/ai/campaigns"
           className={({ isActive }) =>
             isActive ? "text-blue-500 relative" : ""
           }
@@ -21,7 +21,7 @@ const Nav = () => {
         </NavLink>
 
         <NavLink
-          to="/user/target-audience"
+          to="/user/ai/target-audience"
           className={({ isActive }) =>
             isActive ? "text-blue-500 relative" : ""
           }
@@ -37,7 +37,7 @@ const Nav = () => {
         </NavLink>
 
         <NavLink
-          to="/user/add-competitors"
+          to="/user/ai/add-competitors"
           className={({ isActive }) =>
             isActive ? "text-blue-500 relative" : ""
           }
