@@ -18,7 +18,7 @@ const DescribeQuestion = () => {
 
   return (
     <div className="flex flex-row min-h-screen">
-      <div className="w-[45%] hidden sm:flex">
+      <div className="w-[42%] hidden sm:flex">
         <Leftsidebar />
       </div>
 

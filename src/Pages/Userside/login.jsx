@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <div className="flex flex-row min-h-screen w-auto">
       {/* Sidebar with fixed width */}
-      <div className="w-[45%] hidden sm:flex ">
+      <div className="w-[42%] hidden sm:flex ">
         <Leftsidebar />
       </div>
 

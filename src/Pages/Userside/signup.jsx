@@ -7,7 +7,7 @@ const Signup = () => {
  
   return (
     <div className="flex flex-row min-h-screen w-auto">
-      <div className="w-[45%] hidden sm:flex">
+      <div className="w-[42%] hidden sm:flex">
          <Leftsidebar />
        </div>
        
@@ -15,7 +15,7 @@ const Signup = () => {
       {/* Main Content Area */}
       <div className="flex-1 bg-[#f8f8f8] flex flex-col items-center justify-start">
         <div className="p-4 max-w-md w-full text-center mt-2">
-          <h1 className="text-[35px] sm:text-[40px] font-bold  text-gray-800">Welcome to Compass</h1>
+          <h1 className="text-[35px] sm:text-[38px] font-bold  text-gray-800">Welcome to Compass</h1>
           <p className=" text-[#8D8888]">Lorem Ipsum ha sido el texto de relleno estándar</p>
 
           {/* Login Form */}
