@@ -6,11 +6,11 @@ import {
   CircleHelp,
   CalendarClock,
   LayoutDashboard,
-  Gauge,
   SaveAll,
-  SquareMenu,
+  Cog,
   Menu,
 } from 'lucide-react';
+import CampaignIcon from '../../Adminside/components/CampaignIcon';
 
 const Sidebar = () => {
   const location = useLocation();
@@ -106,7 +106,7 @@ const Sidebar = () => {
                 : 'text-steel-blue-gray'
             }`}
           >
-            <SquareMenu size={22} />
+            <Cog size={22} />
             <span>Content Optimization</span>
           </NavLink>
           <NavLink
@@ -117,7 +117,11 @@ const Sidebar = () => {
                 : 'text-steel-blue-gray'
             }`}
           >
-            <SaveAll size={22} />
+            <CampaignIcon
+              color={`${
+                pathname.includes("/user/history") ? "#ffffff" : "#8ea1b3"
+              }`}
+            />
             <span>Campaigns</span>
           </NavLink>
 

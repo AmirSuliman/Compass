@@ -151,7 +151,7 @@ const Userdashboard = () => {
 
             <div className="w-full px-10">
               <div
-                className="mt-2 flex-col items-center justify-center w-full p-1"
+                className="mt-2 flex-col items-center justify-center w-full p-[3px]"
                 style={{
                   backgroundImage: `url('/bgblue.png')`,
                   backgroundSize: 'cover',
