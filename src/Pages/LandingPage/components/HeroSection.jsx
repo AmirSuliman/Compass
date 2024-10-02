@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-start justify-center w-full h-full bg-white mt-8 overflow-x-hidden">
       {/* Left Column */}
-      <div className="w-full sm:w-2/3 flex flex-col justify-start px-6 md:px-16 flex-grow ">
+      <div className="w-full sm:w-2/3 flex flex-col justify-start px-6 md:px-16 flex-grow sm:ml-20">
         <h1 className="text-3xl lg:text-5xl font-semibold text-gray-800 mb-6 sm:mt-20">
           Take Control of Your Social Media
         </h1>

@@ -3,13 +3,13 @@ import socialImage from '../../../../public/landingpage/SocialImage.png'; // Upd
 
 export default function SocialNetwork() {
   return (
-    <div className="flex gap-8 my-12 flex-col md:flex-row justify-center items-center w-full h-full bg-white px-[5%]">
+    <div className="flex gap-8 mt-8 mb-4 p-8 flex-col md:flex-row justify-center items-center w-full h-full bg-white px-[10%]">
       {/* Left Column */}
       <div className="sm:w-2/5 ">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4 sm:-mt-20">
           Connect all the social networks you love
         </h2>
-        <p className="text-gray-600 mt-6">
+        <p className="text-gray-600 mt-10">
           We currently support Facebook, Instagram, LinkedIn, and Twitter. More
           to come. Felix is purpose-built for ease of use and complete
           flexibility.
