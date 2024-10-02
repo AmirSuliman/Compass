@@ -159,15 +159,15 @@ const Sidebar = () => {
 
           {/* Menu Item: Setting */}
           <NavLink
-            to="/"
+            to="/admin/ai-content"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/settings')
+              pathname.includes('/admin/ai-content')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}
           >
             <Settings size={22} />
-            <span>Setting</span>
+            <span>AI content</span>
           </NavLink>
 
           {/* Menu Item: Calendar */}
