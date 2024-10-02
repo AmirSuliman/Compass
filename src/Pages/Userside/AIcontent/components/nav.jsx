@@ -52,7 +52,7 @@ const Nav = () => {
           )}
         </NavLink>
       </div>
-      <div className="h-[1px] w-1/3 bg-[#E0E0E0] mt-1.5" />
+      <div className="h-[1px] w-full sm:w-1/3 bg-[#E0E0E0] mt-1.5" />
     </>
   );
 };

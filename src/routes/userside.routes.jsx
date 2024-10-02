@@ -240,7 +240,7 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/ai/history-goals',
+    path: '/user/history/goals',
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <Historyofgoalsandkpis/>
@@ -248,7 +248,7 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/ai/history-ai-recommendation',
+    path: '/user/history/ai-recommendation',
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <HistoryofAirecommendation/>
@@ -256,7 +256,7 @@ const usersideRouter = [
     ),
   },
   {
-    path: '/user/ai/history',
+    path: '/user/history/ai',
     element: (
       <DefaultLayout headerChildren={<SearchInput />}>
         <History/>

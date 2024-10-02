@@ -8,6 +8,7 @@ import {
   LayoutDashboard,
   Gauge,
   SaveAll,
+  SquareMenu,
   Menu,
 } from 'lucide-react';
 
@@ -101,6 +102,17 @@ const Sidebar = () => {
             to="/user/ai/campaigns"
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
               pathname.includes('/user/ai')
+                ? 'text-white bg-black rounded-md font-semibold'
+                : 'text-steel-blue-gray'
+            }`}
+          >
+            <SquareMenu size={22} />
+            <span>Content Optimization</span>
+          </NavLink>
+          <NavLink
+            to="/user/history/goals"
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes('/user/history')
                 ? 'text-white bg-black rounded-md font-semibold'
                 : 'text-steel-blue-gray'
             }`}

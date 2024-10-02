@@ -30,7 +30,7 @@ const Campaigns = () => {
 
   return (
     <div>
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-center justify-between">
         <h1 className="text-2xl font-semibold">AI Content Recommendation</h1>
         <div className="border flex flex-row gap-2 p-2 rounded-lg">
           <button className="text-white bg-black rounded-lg p-4 text-[14px]">All Mails</button>
@@ -58,7 +58,7 @@ const Campaigns = () => {
                       Lorem Ipsum ha sido el texto de relleno estándar de las Lorem
                     </p>
                   </div>
-                  <EllipsisVertical onClick={handleEllipsisClick} />
+                  <button className="bg-[#FDC546] rounded-full p-2 px-3 text-[12px]" onClick={handleEllipsisClick} > Create campaign </button>
                 </div>
               </td>
             </tr>
@@ -72,7 +72,8 @@ const Campaigns = () => {
                       Lorem Ipsum ha sido el texto de relleno estándar de las Lorem
                     </p>
                   </div>
-                  <EllipsisVertical onClick={handleEllipsisClick} />
+                  <button className="bg-[#FDC546] rounded-full p-2 px-3 text-[12px]" onClick={handleEllipsisClick} > Create campaign </button>
+
                 </div>
               </td>
             </tr>
@@ -86,7 +87,8 @@ const Campaigns = () => {
                       Lorem Ipsum ha sido el texto de relleno estándar de las Lorem
                     </p>
                   </div>
-                  <EllipsisVertical onClick={handleEllipsisClick} />
+                  <button className="bg-[#FDC546] rounded-full p-2 px-3 text-[12px]" onClick={handleEllipsisClick} > Create campaign </button>
+
                 </div>
               </td>
             </tr>
