@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from "react"
+import { NavLink, useLocation } from "react-router-dom"
 import {
   Calendar,
   Settings,
@@ -9,73 +9,80 @@ import {
   Gauge,
   SaveAll,
   Menu,
-} from 'lucide-react';
+  Megaphone,
+  Cog,
+  Rss,
+  MonitorPlay,
+  Compass,
+} from "lucide-react"
+import CampaignIcon from "./CampaignIcon"
+import RevenueIcon from "./RevenueIcon"
 
 const Sidebar = () => {
-  const location = useLocation();
-  const { pathname } = location;
-  const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 768);
-  const [, setIsMobile] = useState(window.innerWidth < 768);
+  const location = useLocation()
+  const { pathname } = location
+  const [showSidebar, setShowSidebar] = useState(window.innerWidth >= 768)
+  const [, setIsMobile] = useState(window.innerWidth < 768)
 
   useEffect(() => {
     const handleResize = () => {
-      const isMobileView = window.innerWidth < 768;
-      setIsMobile(isMobileView);
-      setShowSidebar(!isMobileView); // Show sidebar if not mobile, hide if mobile
-    };
+      const isMobileView = window.innerWidth < 768
+      setIsMobile(isMobileView)
+      setShowSidebar(!isMobileView) // Show sidebar if not mobile, hide if mobile
+    }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize)
 
     // Clean up event listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   return (
     <>
       <button
         onClick={() => {
-          setShowSidebar(!showSidebar);
+          setShowSidebar(!showSidebar)
         }}
-        className="fixed top-4 right-4 font-light text-3xl size-[50px] flex items-center justify-center z-[100] bg-Yellow text-white rounded-lg md:hidden"
+        className='fixed top-4 right-4 font-light text-3xl size-[50px] flex items-center justify-center z-[100] bg-Yellow text-white rounded-lg md:hidden'
       >
-        {showSidebar ? 'x' : <Menu size={40} />}
+        {showSidebar ? "x" : <Menu size={40} />}
       </button>
       <aside
         className={`fixed left-0 top-0 bottom-0 sm:z-0 z-[100] flex h-screen w-max flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 ${
           showSidebar
-            ? '-translate-x-0 transition-all ease-in-out duration-500 shadow-lg'
-            : '-translate-x-full transition-all ease-in-out duration-500'
+            ? "-translate-x-0 transition-all ease-in-out duration-500 shadow-lg"
+            : "-translate-x-full transition-all ease-in-out duration-500"
         } bg-white`}
       >
-        <NavLink to="/" className="block mx-auto mt-4">
-          <img src="/compass.svg" alt="logo" className="size-32" />
+        <NavLink to='/' className='block mx-auto mt-4'>
+          <img src='/compass.svg' alt='logo' className='size-32' />
         </NavLink>
 
-        <nav className="px-4 no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
+        <nav className='px-4 no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear'>
           {/* <h1 className="text-sm text-black font-medium ml-8">ANALYTICAL</h1> */}
 
           {/* Menu Item: Performance */}
-          {/* <NavLink
-            to="/"
+          <NavLink
+            to='/'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/dashboard')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/dashboard")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
             <Gauge size={22} />
             <span>Performance</span>
-          </NavLink> */}
+          </NavLink>
 
           {/* Menu Item: Dashboard */}
           <NavLink
-            to="/admin-dashboard"
+            to='/admin-dashboard'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin-dashboard')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin-dashboard")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
             <LayoutDashboard size={22} />
@@ -85,11 +92,11 @@ const Sidebar = () => {
           {/* Menu Item: Connections */}
 
           <NavLink
-            to="/admin/all-users"
+            to='/admin/all-users'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/all-users')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/all-users")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
             <CalendarClock size={22} />
@@ -99,71 +106,79 @@ const Sidebar = () => {
           {/* Menu Item: Revenue */}
 
           <NavLink
-            to="/admin/revenue"
+            to='/admin/revenue'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/revenue')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/revenue")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
-            <SaveAll size={22} />
+            <RevenueIcon
+              color={`${
+                pathname.includes("/admin/revenue") ? "#ffffff" : "#8ea1b3"
+              }`}
+            />
             <span>Revenue</span>
           </NavLink>
 
           {/* Menu Item: Support */}
 
           <NavLink
-            to="/admin/campaigns"
+            to='/admin/campaigns'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/campaigns')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/campaigns")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
-            <CircleHelp size={22} />
+            <CampaignIcon
+              color={`${
+                pathname.includes("/admin/campaigns") ? "#ffffff" : "#8ea1b3"
+              }`}
+            />
             <span>Campaigns</span>
           </NavLink>
           <NavLink
-            to="/admin/ai-content-optimization"
+            to='/admin/ai-content-optimization'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/ai-content-optimization')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/ai-content-optimization")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
-            <CircleHelp size={22} />
+            <Cog size={22} />
             <span>Optimizations</span>
           </NavLink>
           <NavLink
-            to="/admin/subscribedplan"
+            to='/admin/subscribedplan'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/subscribedplan')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/subscribedplan")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
-            <CircleHelp size={22} />
+            <MonitorPlay size={22} />
             <span>Subscriptions</span>
           </NavLink>
           <NavLink
-            to="/admin/suggestions"
+            to='/admin/suggestions'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/suggestions')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/suggestions")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
-            <CircleHelp size={22} />
+            <Compass size={22} />
             <span>Suggestions</span>
           </NavLink>
 
           {/* Menu Item: Setting */}
           <NavLink
-            to="/admin/ai-content"
+            to='/admin/ai-content'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/admin/ai-content')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/admin/ai-content")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
             <Settings size={22} />
@@ -173,20 +188,32 @@ const Sidebar = () => {
           {/* Menu Item: Calendar */}
 
           <NavLink
-            to="/"
+            to='/'
             className={`flex items-center gap-6 px-8 py-4 text-sm ${
-              pathname.includes('/calendar')
-                ? 'text-white bg-black rounded-md font-semibold'
-                : 'text-steel-blue-gray'
+              pathname.includes("/calendar")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
             }`}
           >
             <Calendar size={22} />
             <span>Calendar</span>
           </NavLink>
+
+          <NavLink
+            to='/'
+            className={`flex items-center gap-6 px-8 py-4 text-sm ${
+              pathname.includes("/calendar")
+                ? "text-white bg-black rounded-md font-semibold"
+                : "text-steel-blue-gray"
+            }`}
+          >
+            <Settings size={22} />
+            <span>Setting</span>
+          </NavLink>
         </nav>
       </aside>
     </>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar
