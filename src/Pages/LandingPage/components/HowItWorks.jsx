@@ -7,7 +7,7 @@ const HowItWorks = () => {
   return (
     <div className="container mx-auto p-5 sm:p-16">
       {/* Heading */}
-      <h2 className="text-3xl lg:text-5xl font-semibold text-center mb-8">
+      <h2 className="text-3xl lg:text-5xl font-semibold text-start mb-8">
         How It Works
       </h2>
 
