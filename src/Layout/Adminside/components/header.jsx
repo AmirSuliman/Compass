@@ -10,7 +10,8 @@ const Header = ({ children }) => {
     navigate('/user/profile'); 
   };
   return (
-    <header className="flex gap-4 w-full px-8 items-center justify-between py-4">
+    <div className='px-4'>
+ <header className="flex gap-4 w-full  items-center justify-between py-4">
       <div className="flex flex-col w-full">
         <h1 className="text-[20px] font-medium text-black">
           Welcome back, Bocil Prik
@@ -40,6 +41,10 @@ const Header = ({ children }) => {
       {/* Dropdown Icon */}
       <ChevronDown className="text-gray-400 cursor-pointer" />
     </header>
+    <div className='px-8 bg-gray-200 w-full h-[2px] '/>
+
+    </div>
+   
   );
 };
 
