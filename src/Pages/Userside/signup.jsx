@@ -80,7 +80,7 @@ const Signup = () => {
             </button>
           </form>
           <p className="mt-4 text-sm">Don’t have an account? 
-            <Link to={"/"}> Login here </Link></p>
+            <Link to={"/login"}> Login here </Link></p>
             <img src="/Frame 1597887171.png" alt="img" className="mt-4" />
             <Loginwithgoogle/>
             <Loginwithapple/>

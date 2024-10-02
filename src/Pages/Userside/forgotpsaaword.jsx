@@ -37,7 +37,7 @@ const Forgotpassword = () => {
             </button>
           </form>
           <p className="mt-4 text-sm">I remembered, I wanna 
-            <Link to={"/"}> Login</Link></p>
+            <Link to={"/login"}> Login</Link></p>
            
         </div>
       </div>
