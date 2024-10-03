@@ -7,6 +7,7 @@ import UpdateTargetAudiencePopup from "./components/updatetargetaudiencepopup";
 const Targetaudience = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [isEditPopupVisible, setEditPopupVisible] = useState(false); // State for edit popup
+  const [activeButton, setActiveButton] = useState(""); // State for active button
 
   const handleOpenPopup = () => {
     setPopupVisible(true);
@@ -22,6 +23,10 @@ const Targetaudience = () => {
 
   const handleCloseEditPopup = () => {
     setEditPopupVisible(false); // Close edit popup
+  };
+
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName); // Set the active button
   };
 
   return (
@@ -43,11 +48,45 @@ const Targetaudience = () => {
       <Nav />
 
       <div className="flex flex-row gap-4 mt-4">
-        <button className="px-6 p-2 border border-black font-medium rounded-full bg-white">Start Ups</button>
-        <button className="px-6 p-2 border border-black font-medium rounded-full bg-white">Banking Companies</button>
-        <button className="px-6 p-2 border border-black font-medium rounded-full bg-white">Entrepreneurs</button>
-        <button onClick={handleOpenPopup} className="px-6 p-2 border font-medium rounded-full  bg-gray-300">Add more</button>
-        <button className="px-6 p-2 border  font-medium rounded-full bg-gray-300">Saved Audience</button>
+        <button
+          onClick={() => handleButtonClick("StartUps")}
+          className={`px-6 p-2 border font-medium rounded-full ${
+            activeButton === "StartUps" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
+          Start Ups
+        </button>
+        <button
+          onClick={() => handleButtonClick("BankingCompanies")}
+          className={`px-6 p-2 border font-medium rounded-full ${
+            activeButton === "BankingCompanies" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
+          Banking Companies
+        </button>
+        <button
+          onClick={() => handleButtonClick("Entrepreneurs")}
+          className={`px-6 p-2 border font-medium rounded-full ${
+            activeButton === "Entrepreneurs" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
+          Entrepreneurs
+        </button>
+        <button
+          onClick={handleOpenPopup}
+          className="px-6 p-2 border font-medium rounded-full bg-gray-300"
+        >
+          Add more
+        </button>
+        <button
+          onClick={handleOpenEditPopup}
+          className="px-6 p-2 border font-medium rounded-full bg-gray-300"
+        >
+          Edit
+        </button>
+        <button className="px-6 p-2 border font-medium rounded-full bg-gray-300">
+          Saved Audience
+        </button>
       </div>
 
       <table className="w-full mt-8 border-collapse">
@@ -62,11 +101,12 @@ const Targetaudience = () => {
           </tr>
         </thead>
         <tbody className="bg-white">
-          <tr > {/* Open edit popup on row click */}
-            <td className="p-4 text-left" onClick={handleOpenEditPopup}>Startup</td>
+          <tr>
+            {/* Open edit popup on row click */}
+            <td className="p-4 text-left" >Startup</td>
             <td className="p-4 text-left">Lorem Ipsum, Lorem</td>
             <td className="p-4 text-left">Lorem</td>
-            <td className="p-4 text-left"> Linkedln</td>
+            <td className="p-4 text-left">LinkedIn</td>
             <td className="p-4 text-left">Lorem</td>
             <td className="p-4 text-left">Lorem Ipsum ha sido el texto de relleno</td>
           </tr>
