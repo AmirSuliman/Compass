@@ -1,42 +1,56 @@
 import { useState } from "react";
-import { EllipsisVertical } from 'lucide-react';
-import Nav from "./components/nav";
 import { useNavigate } from "react-router-dom";
-import AIcontentrecomendation from "./recomendation";
+import Nav from "./components/nav";
+import { ChevronDown } from "lucide-react";
+
 const Campaigns = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSecondOpen, setIsSecondOpen] = useState(false); // New state for second popup
-  const navigate= useNavigate();
-  const handlenavigate=()=>{
-    navigate('/user/ai/view-recomendation')
-  }
+  const [isSecondOpen, setIsSecondOpen] = useState(false);
+  const [isThirdOpen, setIsThirdOpen] = useState(false); // New state for the third popup
+  const navigate = useNavigate();
+
+  const handlenavigate = () => {
+    navigate('/user/ai/view-recomendation');
+  };
+
   const AIrecommendationnavigate = () => {
     navigate('/user/ai/Ai-content-recomendation');
   };
-  
+
   const handleEllipsisClick = () => {
     setIsOpen(true);
   };
 
   const handleClose = () => {
     setIsOpen(false);
-    setIsSecondOpen(false); // Close both popups
+    setIsSecondOpen(false);
+    setIsThirdOpen(false); // Close all popups
   };
 
   const handleNextStep = () => {
-    setIsOpen(false); // Close the first popup
-    setIsSecondOpen(true); // Open the second popup
+    setIsOpen(false); // Close first popup
+    setIsSecondOpen(true); // Open second popup
+  };
+
+  const handleNextToAudience = () => {
+    setIsSecondOpen(false); // Close second popup
+    setIsThirdOpen(true); // Open third popup (Audience selection)
   };
 
   return (
     <div>
       <div className="flex flex-col sm:flex-row items-center justify-between">
         <h1 className="text-2xl font-semibold">AI Content Recommendation</h1>
-        <div className="border flex flex-row gap-2 p-2 rounded-lg">
-          <button className="text-white bg-black rounded-lg p-4 text-[14px]">All Mails</button>
-          <button className="text-gray-600 font-medium bg-white rounded-lg p-4 text-[14px]">Social Media</button>
-          <button className="text-gray-600 font-medium bg-white rounded-lg p-4 text-[14px]">Websites</button>
+        <div className="flex flex-row gap-3">
+        <button className="text-black bg-white rounded-lg p-3 text-[14px] flex flex-row items-center gap-3">
+            <img src="/image 10.png" alt="img"/>
+            Instagram
+            <ChevronDown/>
+            </button>
+            <div className="bg-black text-white p-3 rounded-lg ">7/30</div>
         </div>
+          
+          
       </div>
 
       <Nav />
@@ -73,7 +87,6 @@ const Campaigns = () => {
                     </p>
                   </div>
                   <button className="bg-[#FDC546] rounded-full p-2 px-3 text-[12px]" onClick={handleEllipsisClick} > Create campaign </button>
-
                 </div>
               </td>
             </tr>
@@ -88,21 +101,21 @@ const Campaigns = () => {
                     </p>
                   </div>
                   <button className="bg-[#FDC546] rounded-full p-2 px-3 text-[12px]" onClick={handleEllipsisClick} > Create campaign </button>
-
                 </div>
               </td>
             </tr>
 
-            {/* Repeat other rows here */}
+            {/* Repeat similar rows */}
           </tbody>
         </table>
       </div>
 
-      <div className="text-right w-full mb-4 mt-8"
-      
-      >
+      <div className="text-right w-full mb-4 mt-8">
         <button className="px-12 py-2 bg-[#FDC546] rounded-full text-black font-medium"
-        onClick={AIrecommendationnavigate}>Next step</button>
+          //onClick={AIrecommendationnavigate}
+          >
+          Next step
+        </button>
       </div>
 
       {/* First Popup */}
@@ -170,96 +183,136 @@ const Campaigns = () => {
           className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
           onClick={handleClose}
         >
+                  <div
+                    className="bg-white rounded-md p-4 w-full sm:w-[900px] shadow-md"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="p-4">
+                    <div className="p-4">
+                  <p>1. Lorem Ipsum Ha Sido El Texto De Relleno Estándar De Las El Texto De Relleno Estándar De Las?</p>
+                  <select className="mt-1 block w-2/3 text-sm text-gray-700 p-4 border rounded-md">
+                    <option value="">Create a new audience</option>
+                    <option value="18-24">option</option>
+                    <option value="25-34">option</option>
+                    <option value="35-44">option</option>
+                    <option value="45-54">option</option>
+                    <option value="55-64">option</option>
+                  </select>
+                </div>
+                <div className="p-4">
+                  <p>2. Lorem Ipsum Ha Sido El Texto De Relleno Estándar De Las El Texto De Relleno Estándar De Las?</p>
+                  <div className="flex flex-row gap-2 sm:gap-12 p-2">
+                    <label>
+                      <input type="radio" name="question1" value="option1" />
+                      Lorem Ipsum
+                    </label>
+                    <label>
+                      <input type="radio" name="question1" value="option2" />
+                      Lorem Ipsum
+                    </label>
+                    <label>
+                      <input type="radio" name="question1" value="option3" />
+                      Lorem Ipsum
+                    </label>
+                    <label>
+                      <input type="radio" name="question1" value="option4" />
+                      Lorem Ipsum
+                    </label>
+                  </div>
+                </div>
+              <div className="text-right">
+                <button
+                  className="bg-[#FDC546] text-black py-2 px-8 rounded-full mt-8"
+                  onClick={handleNextToAudience}
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Third Popup */}
+      {isThirdOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
+          onClick={handleClose}
+        >
           <div
             className="bg-white rounded-md p-4 w-[700px] shadow-md"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Competitor selection logic */}
             <div className="p-4 border rounded-lg">
-                <div className="flex flex-row items-center justify-between w-full ">
-                    <h1>Competitor</h1>
-                    <p>Add</p>
-                </div>
-                <table className="bg-white w-full mt-8">
-  <tbody>
-    <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
-      <label className="flex flex-row items-center gap-4 w-full">
-        <input type="checkbox" className="mr-4" />
-        <div className="flex flex-row gap-4 w-full justify-between items-center">
-          <div className="flex flex-row gap-4">
-            <img src="/image 19.png" alt="img" />
-            <p className="text-[#8E8E8E] text-[12px]">
-              Lorem Ipsum ha sido el texto de relleno estándar de las Lorem Ipsum ha...
-            </p>
-          </div>
-          <button className="rounded-full p-3 px-6 border text-[12px] font-medium"
-          onClick={handleClose}>
-            Add Competitor
-          </button>
-        </div>
-      </label>
-    </tr>
+              <div className="flex flex-row items-center justify-between w-full">
+                <h1>Competitor</h1>
+                <p>Add</p>
+              </div>
 
-    <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
-      <label className="flex flex-row items-center gap-4 w-full">
-        <input type="checkbox" className="mr-4" />
-        <div className="flex flex-row gap-4 w-full justify-between items-center">
-          <div className="flex flex-row gap-4">
-            <img src="/image 19.png" alt="img" />
-            <p className="text-[#8E8E8E] text-[12px]">
-              Lorem Ipsum ha sido el texto de relleno estándar
-            </p>
-          </div>
-          <button className="rounded-full p-3 px-6 border text-[12px] font-medium">
-            Add Competitor
-          </button>
-        </div>
-      </label>
-    </tr>
+              {/* Table of competitors */}
+              <table className="bg-white w-full mt-8">
+                <tbody>
+                  <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
+                    <label className="flex flex-row items-center gap-4 w-full">
+                      <input type="checkbox" className="mr-4" />
+                      <div className="flex flex-row gap-4 w-full justify-between items-center">
+                        <div className="flex flex-row gap-4">
+                          <img src="/image 19.png" alt="img" />
+                          <p className="text-[#8E8E8E] text-[12px]">
+                            Lorem Ipsum ha sido el texto de relleno estándar de las...
+                          </p>
+                        </div>
+                        <button className="rounded-full p-3 px-6 border text-[12px] font-medium" onClick={handleClose}>
+                          Add Competitor
+                        </button>
+                      </div>
+                    </label>
+                  </tr>
 
-    <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
-      <label className="flex flex-row items-center gap-4 w-full">
-        <input type="checkbox" className="mr-4" />
-        <div className="flex flex-row gap-4 w-full justify-between items-center">
-          <div className="flex flex-row gap-4">
-            <img src="/image 19.png" alt="img" />
-            <p className="text-[#8E8E8E] text-[12px]">
-              Lorem Ipsum ha sido el texto de relleno estándar d...
-            </p>
-          </div>
-          <button className="rounded-full p-3 px-6 border text-[12px] font-medium">
-            Add Competitor
-          </button>
-        </div>
-      </label>
-    </tr>
+                  <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
+                    <label className="flex flex-row items-center gap-4 w-full">
+                      <input type="checkbox" className="mr-4" />
+                      <div className="flex flex-row gap-4 w-full justify-between items-center">
+                        <div className="flex flex-row gap-4">
+                          <img src="/image 19.png" alt="img" />
+                          <p className="text-[#8E8E8E] text-[12px]">
+                            Lorem Ipsum ha sido el texto de relleno estándar de las...
+                          </p>
+                        </div>
+                        <button className="rounded-full p-3 px-6 border text-[12px] font-medium">
+                          Add Competitor
+                        </button>
+                      </div>
+                    </label>
+                  </tr>
 
-    <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
-      <label className="flex flex-row items-center gap-4 w-full">
-        <input type="checkbox" className="mr-4" />
-        <div className="flex flex-row gap-4 w-full justify-between items-center">
-          <div className="flex flex-row gap-4">
-            <img src="/image 19.png" alt="img" />
-            <p className="text-[#8E8E8E] text-[12px]">
-              Lorem Ipsum ha sido el texto de relleno estándar de las...
-            </p>
-          </div>
-          <button className="rounded-full p-3 px-6 border text-[12px] font-medium">
-            Add Competitor
-          </button>
-        </div>
-      </label>
-    </tr>
-  </tbody>
-</table>              
-              
-            </div>
-            <div className="text-right">
-              <button
-                className="bg-[#FDC546] text-black py-2 px-8 rounded-full mt-8"
-                onClick={handlenavigate}
-              >
-                Ask for recommendations
-              </button>
+                  <tr className="flex flex-col sm:flex-row gap-8 items-center justify-between mb-4">
+                    <label className="flex flex-row items-center gap-4 w-full">
+                      <input type="checkbox" className="mr-4" />
+                      <div className="flex flex-row gap-4 w-full justify-between items-center">
+                        <div className="flex flex-row gap-4">
+                          <img src="/image 19.png" alt="img" />
+                          <p className="text-[#8E8E8E] text-[12px]">
+                            Lorem Ipsum ha sido el texto de relleno estándar de las...
+                          </p>
+                        </div>
+                        <button className="rounded-full p-3 px-6 border text-[12px] font-medium">
+                          Add Competitor
+                        </button>
+                      </div>
+                    </label>
+                  </tr>
+                  {/* Repeat rows */}
+                </tbody>
+              </table>
+
+              <div className="text-right mt-8">
+                <button className="px-12 py-2 bg-[#FDC546] rounded-full text-black font-medium"
+                  onClick={handlenavigate}>
+                  Ask for Recommendation
+                </button>
+              </div>
             </div>
           </div>
         </div>

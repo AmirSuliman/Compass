@@ -58,6 +58,7 @@ import Viewrecommendation from '../Pages/Userside/AIcontent/viewrecomendations';
 import Historyofgoalsandkpis from '../Pages/Userside/AIcontent/historyofgoals';
 import HistoryofAirecommendation from '../Pages/Userside/AIcontent/historyofairecomendation';
 import History from '../Pages/Userside/AIcontent/history';
+import Contentperformance from '../Pages/Userside/dashboard/contentperformance';
 const usersideRouter = [
   {
     path: '/',
@@ -124,6 +125,14 @@ const usersideRouter = [
     element: (
       <DefaultLayout >
         <Overview />
+      </DefaultLayout>
+    ),
+  },
+  {
+    path: '/user/content-performance',
+    element: (
+      <DefaultLayout >
+        <Contentperformance />
       </DefaultLayout>
     ),
   },

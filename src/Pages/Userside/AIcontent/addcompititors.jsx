@@ -1,7 +1,11 @@
 import { ChevronDown } from "lucide-react";
 import Nav from "./components/nav";
-
+import { useNavigate } from "react-router-dom";
 const AddCompetitors=()=>{
+    const navigate= useNavigate();
+    const handleNavigate=()=>{
+        navigate('/user/ai/view-recomendation');
+    }
 
     return(
         <div>
@@ -15,7 +19,7 @@ const AddCompetitors=()=>{
 
             </div>
             <div className="text-white bg-black rounded-lg p-3 text-[12px]">
-            Total Number of recommendation used
+            7/20
             </div>
             </div>
            
@@ -83,6 +87,7 @@ const AddCompetitors=()=>{
         <div className="text-right mt-8 mr-2">
               <button
                 type="submit"
+                onClick={handleNavigate}
                 className="bg-[#FDC546] text-black font-medium px-8 py-2 px-4 rounded-full "
               >
                 Ask for recommendations

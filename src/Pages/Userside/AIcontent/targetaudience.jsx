@@ -35,7 +35,7 @@ const Targetaudience = () => {
             <ChevronDown className="ml-4"/>
           </div>
           <div className="text-white bg-black rounded-lg p-3 text-[12px]">
-            Total Number of recommendation used
+            7/20
           </div>
         </div>
       </div>
@@ -43,11 +43,11 @@ const Targetaudience = () => {
       <Nav />
 
       <div className="flex flex-row gap-4 mt-4">
-        <button className="px-6 p-2 border font-medium rounded-full border-[#0866FF] bg-[#FDC5465C]">Start Ups</button>
-        <button className="px-6 p-2 border font-medium rounded-full border-[#0866FF] bg-[#FDC5465C]">Banking Companies</button>
-        <button className="px-6 p-2 border font-medium rounded-full border-[#0866FF] bg-[#FDC5465C]">Entrepreneurs</button>
-        <button onClick={handleOpenPopup} className="px-6 p-2 border font-medium rounded-full border-[#0866FF] bg-[#FDC5465C]">Add more</button>
-        <button className="px-6 p-2 border font-medium rounded-full border-[#0866FF] bg-[#FDC5465C]">Saved Audience</button>
+        <button className="px-6 p-2 border border-black font-medium rounded-full bg-white">Start Ups</button>
+        <button className="px-6 p-2 border border-black font-medium rounded-full bg-white">Banking Companies</button>
+        <button className="px-6 p-2 border border-black font-medium rounded-full bg-white">Entrepreneurs</button>
+        <button onClick={handleOpenPopup} className="px-6 p-2 border font-medium rounded-full  bg-gray-300">Add more</button>
+        <button className="px-6 p-2 border  font-medium rounded-full bg-gray-300">Saved Audience</button>
       </div>
 
       <table className="w-full mt-8 border-collapse">
@@ -62,13 +62,11 @@ const Targetaudience = () => {
           </tr>
         </thead>
         <tbody className="bg-white">
-          <tr onClick={handleOpenEditPopup}> {/* Open edit popup on row click */}
-            <td className="p-4 text-left">Startup</td>
-            <td className="p-4 text-left">Lorem Ipsum ha sido el texto de relleno estándar de las...</td>
+          <tr > {/* Open edit popup on row click */}
+            <td className="p-4 text-left" onClick={handleOpenEditPopup}>Startup</td>
+            <td className="p-4 text-left">Lorem Ipsum, Lorem</td>
             <td className="p-4 text-left">Lorem</td>
-            <td className="p-4 text-left flex flex-row gap-2 items-center justify-center">
-              <img src="/linkedin.png" alt="img"/> Linkedln
-            </td>
+            <td className="p-4 text-left"> Linkedln</td>
             <td className="p-4 text-left">Lorem</td>
             <td className="p-4 text-left">Lorem Ipsum ha sido el texto de relleno</td>
           </tr>

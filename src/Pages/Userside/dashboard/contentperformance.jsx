@@ -1,8 +1,10 @@
-import { CloudDownload, Search, Copy, Files, SquareArrowOutUpRight } from 'lucide-react';
+import { ChevronDown, ChevronUp, CloudDownload, Search } from 'lucide-react';
 
-const DetailTable = () => {
-  return (
-    <div className="w-full border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800">
+
+const Contentperformance =()=>{
+
+    return(
+        <div className="w-full border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800">
       {/* Header Section */}
       <div className="w-full flex flex-row items-center justify-between p-4">
         <h2 className="text-[#555555] dark:text-gray-100 font-medium text-[18px]">Details</h2>
@@ -34,11 +36,47 @@ const DetailTable = () => {
           <thead>
             <tr className="text-left text-gray-500 dark:text-gray-300 text-sm font-medium px-6 items-center justify-center">
               <th className="px-6 py-3 border-b dark:border-gray-600">Name</th>
-              <th className="px-6 py-3 border-b dark:border-gray-600">Date</th>
-              <th className="px-6 py-3 border-b dark:border-gray-600">Open Rate</th>
-              <th className="px-6 py-3 border-b dark:border-gray-600">CTR</th>
-              <th className="px-6 py-3 border-b dark:border-gray-600">Subscribers</th>
-              <th className="px-6 py-3 border-b dark:border-gray-600">Level of achievement</th>
+              <th className="px-6 py-3 border-b dark:border-gray-600">
+                <div className='flex flex-row gap-1 items-center justify-center'>
+                    <div className='flex flex-col '>
+                        <ChevronUp size={18} className='cursor-pointer'/>
+                        <ChevronDown size={18} className='-mt-2 cursor-pointer'/>
+
+                    </div>
+                Date   
+                </div>
+                </th>
+              <th className="px-6 py-3 border-b dark:border-gray-600">
+              <div className='flex flex-row gap-1 items-center justify-center'>
+                    <div className='flex flex-col '>
+                        <ChevronUp size={18} className='cursor-pointer'/>
+                        <ChevronDown size={18} className='-mt-2 cursor-pointer'/>
+
+                    </div>
+                  Open Rate 
+                </div>
+              </th>
+              <th className="px-6 py-3 border-b dark:border-gray-600">
+              <div className='flex flex-row gap-1 items-center justify-center'>
+                    <div className='flex flex-col '>
+                        <ChevronUp size={18} className='cursor-pointer'/>
+                        <ChevronDown size={18} className='-mt-2 cursor-pointer'/>
+
+                    </div>
+                   CTR 
+                </div>
+              </th>
+              <th className="px-6 py-3 border-b dark:border-gray-600">
+              <div className='flex flex-row gap-1 items-center justify-center'>
+                    <div className='flex flex-col '>
+                        <ChevronUp size={18} className='cursor-pointer'/>
+                        <ChevronDown size={18} className='-mt-2 cursor-pointer'/>
+
+                    </div>
+                  Subscribers   
+                </div>
+              </th>
+              <th className="px-6 py-3 border-b dark:border-gray-600">AI Recommendation</th>
 
             </tr>
           </thead>
@@ -47,25 +85,7 @@ const DetailTable = () => {
           <tbody className='items-center justify-center'>
             {/* First Row */}
             <tr className="text-sm text-gray-600 dark:text-gray-200">
-              <td className="px-6 py-4 border-b dark:border-gray-600">
-                <div className="flex flex-row gap-2 px-2 sm:px-0 sm:gap-5 items-center">
-                  <img src="/image 19.png" alt="img" className="w-10 h-10 rounded" />
-                    <p className="text-sm text-gray-500 dark:text-gray-300">
-                      Lorem Ipsum ha sido el texto de relleno estándar de las...
-                    </p>
-                   
-                </div>
-              </td>
-              <td className="px-6 py-4 border-b dark:border-gray-600">24/May/2024</td>
-              <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
-              <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
-              <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
-              <td className="px-6 py-4 border-b dark:border-gray-600">459/1.200 visits</td>
-
-            </tr>
-
-            <tr className="text-sm text-gray-600 dark:text-gray-200">
-              <td className="px-6 py-4 border-b dark:border-gray-600">
+              <td className="px-4 py-4 border-b dark:border-gray-600">
                 <div className="flex flex-row gap-2 px-2 sm:px-0 sm:gap-5 items-center">
                   <img src="/image 19.png" alt="img" className="w-10 h-10 rounded" />
                     <p className="text-sm text-gray-500 dark:text-gray-300">
@@ -79,13 +99,12 @@ const DetailTable = () => {
               <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
               <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
               <td className="px-6 py-4 border-b dark:border-gray-600 ">
-                <button className='bg-[#FDC546] rounded-full p-2 px-4 text-[12px] text-black font-medium'>Create campaign</button>
+                <button className='bg-[#FDC546] rounded-full p-2 text-[12px] text-black font-medium'>Request a content optimization</button>
               </td>
-
             </tr>
 
             <tr className="text-sm text-gray-600 dark:text-gray-200">
-              <td className="px-6 py-4 border-b dark:border-gray-600">
+              <td className="px-4 py-4 border-b dark:border-gray-600">
                 <div className="flex flex-row gap-2 px-2 sm:px-0 sm:gap-5 items-center">
                   <img src="/image 19.png" alt="img" className="w-10 h-10 rounded" />
                     <p className="text-sm text-gray-500 dark:text-gray-300">
@@ -99,7 +118,27 @@ const DetailTable = () => {
               <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
               <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
               <td className="px-6 py-4 border-b dark:border-gray-600 ">
-                <button className='bg-[#FDC546] rounded-full p-2 px-4 text-[12px] text-black font-medium'>Create campaign</button>
+                <button className='bg-[#FDC546] rounded-full p-2  text-[12px] text-black font-medium'>Request a content optimization</button>
+              </td>
+
+            </tr>
+
+            <tr className="text-sm text-gray-600 dark:text-gray-200">
+              <td className="px-4 py-4 border-b dark:border-gray-600">
+                <div className="flex flex-row gap-2 px-2 sm:px-0 sm:gap-5 items-center">
+                  <img src="/image 19.png" alt="img" className="w-10 h-10 rounded" />
+                    <p className="text-sm text-gray-500 dark:text-gray-300">
+                      Lorem Ipsum ha sido el texto de relleno estándar de las...
+                    </p>
+                   
+                </div>
+              </td>
+              <td className="px-6 py-4 border-b dark:border-gray-600">24/May/2024</td>
+              <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
+              <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
+              <td className="px-6 py-4 border-b dark:border-gray-600">28k</td>
+              <td className="px-6 py-4 border-b dark:border-gray-600 ">
+                <button className='bg-[#FDC546] rounded-full p-2 text-[12px] text-black font-medium'>Request a content optimization</button>
               </td>
             </tr>
             {/* Additional rows can be added here */}
@@ -107,7 +146,6 @@ const DetailTable = () => {
         </table>
       </div>
     </div>
-  );
-};
-
-export default DetailTable;
+    )
+}
+export default Contentperformance;
